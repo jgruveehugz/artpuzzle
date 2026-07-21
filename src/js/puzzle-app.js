@@ -104,6 +104,7 @@ class PuzzleApp {
 
       // Create board layout
       this.board = new PuzzleBoard(this.puzzle, this.canvas);
+      this.puzzle._board = this.board;
       this.board.layout();
 
       // Create input handler
@@ -233,20 +234,19 @@ class PuzzleApp {
 
   // ─── Canvas sizing ───────────────────────────────────────────────────────────
   _resizeCanvas() {
-    const parent = this.canvas.parentElement;
     const dpr = window.devicePixelRatio || 1;
-    const w = parent ? parent.clientWidth : window.innerWidth;
-    const h = parent ? parent.clientHeight : window.innerHeight;
+    // Use full viewport — top bar (~60px) and bottom controls (~50px)
+    const topBar = document.querySelector('.puzzle-topbar') || document.querySelector('header');
+    const bottomBar = document.querySelector('.puzzle-controls') || document.querySelector('footer');
+    const topH = topBar ? topBar.offsetHeight : 60;
+    const botH = bottomBar ? bottomBar.offsetHeight : 50;
+    const w = window.innerWidth;
+    const h = window.innerHeight - topH - botH;
 
-    this.canvas.width = w * dpr;
-    this.canvas.height = h * dpr;
-    this.canvas.style.width = w + 'px';
-    this.canvas.style.height = h + 'px';
-    this.ctx.scale(dpr, dpr);
-
-    // Adjust canvas dimensions for rendering (we work in CSS pixels)
     this.canvas.width = w;
-    this.canvas.height = h;
+    this.canvas.height = Math.max(h, 400);
+    this.canvas.style.width = w + 'px';
+    this.canvas.style.height = Math.max(h, 400) + 'px';
   }
 
   _onResize() {

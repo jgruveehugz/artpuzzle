@@ -774,26 +774,32 @@ class JigsawPuzzle extends Emitter {
   shuffle() {
     const rng = mulberry32(Date.now());
     const margin = this.tabSize + 20;
+    // Scattering zone: the area outside the puzzle board but inside a reasonable range
+    // We'll scatter pieces in a ring around the board
     const boardW = this.imageW;
     const boardH = this.imageH;
-    // Scatter pieces in a moderate ring around the board — close enough to see
-    const scatterRange = Math.max(boardW, boardH) * 0.2;
+    const scatterRange = Math.max(boardW, boardH) * 0.6;
 
     for (const piece of this.pieces) {
+      // Place randomly in a ring around the board area
       let px, py;
       let attempts = 0;
       do {
+        // Pick a random position in the extended area
         px = (rng() - 0.5) * (boardW + scatterRange * 2);
         py = (rng() - 0.5) * (boardH + scatterRange * 2);
         attempts++;
       } while (
         attempts < 10 &&
+        // Avoid placing inside the board area
         px > -boardW / 2 - margin &&
         px < boardW / 2 + margin &&
         py > -boardH / 2 - margin &&
         py < boardH / 2 + margin
       );
 
+      // Offset so pieces are scattered around the board center
+      // The board center is at (boardW/2, boardH/2) in world coords
       piece.x = boardW / 2 + px;
       piece.y = boardH / 2 + py;
     }
@@ -810,33 +816,6 @@ class JigsawPuzzle extends Emitter {
     }
     this.completed = false;
     this.completionAnim = 0;
-
-    // Fit view to show all pieces
-    if (this._board) {
-      // Calculate bounds of all pieces
-      let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-      for (const piece of this.pieces) {
-        const halfW = (piece.canvas?.width || piece.width) / 2;
-        const halfH = (piece.canvas?.height || piece.height) / 2;
-        minX = Math.min(minX, piece.x - halfW);
-        minY = Math.min(minY, piece.y - halfH);
-        maxX = Math.max(maxX, piece.x + halfW);
-        maxY = Math.max(maxY, piece.y + halfH);
-      }
-      // Add padding
-      const pad = 40;
-      minX -= pad; minY -= pad; maxX += pad; maxY += pad;
-      const boundsW = maxX - minX;
-      const boundsH = maxY - minY;
-      const cw = this.canvas.width;
-      const ch = this.canvas.height;
-      const scaleX = cw / boundsW;
-      const scaleY = ch / boundsH;
-      this.scale = Math.min(scaleX, scaleY) * 0.95;
-      this.scale = Math.max(0.1, Math.min(2, this.scale));
-      this.offsetX = cw / 2 - (minX + boundsW / 2) * this.scale;
-      this.offsetY = ch / 2 - (minY + boundsH / 2) * this.scale;
-    }
     this._updateProgress();
     this.render();
   }

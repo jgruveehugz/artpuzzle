@@ -46,7 +46,7 @@ class PuzzleBoard {
     this.boardH = p.imageH;
 
     // World dimensions: board + scatter margin on all sides
-    const scatterMargin = Math.max(p.imageW, p.imageH) * 0.8;
+    const scatterMargin = Math.max(p.imageW, p.imageH) * 0.25;
     this.worldW = p.imageW + scatterMargin * 2;
     this.worldH = p.imageH + scatterMargin * 2;
 
@@ -54,8 +54,8 @@ class PuzzleBoard {
     p.boardX = this.boardX;
     p.boardY = this.boardY;
 
-    // Compute initial view transform to fit just the board (not scatter area)
-    this.fitToView(true);
+    // Compute initial view transform to fit everything (board + scatter)
+    this.fitToView(false);
   }
 
   /**
