@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generate Test Image</title>
+</head>
+<body>
+<script>
+// Generate a colorful test image and download it as a data URL.
+// This avoids CORS issues with external images.
+(function() {
+  const c = document.createElement('canvas');
+  c.width = 800;
+  c.height = 600;
+  const ctx = c.getContext('2d');
+
+  // Gradient background
+  const grad = ctx.createLinearGradient(0, 0, 800, 600);
+  grad.addColorStop(0, '#1a1a2e');
+  grad.addColorStop(0.5, '#e94560');
+  grad.addColorStop(1, '#0f3460');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 800, 600);
+
+  // Draw some shapes for visual variety (so pieces are distinguishable)
+  for (let i = 0; i < 30; i++) {
+    ctx.fillStyle = `hsla(${i * 12}, 70%, 60%, 0.6)`;
+    ctx.beginPath();
+    ctx.arc(Math.random() * 800, Math.random() * 600, 20 + Math.random() * 60, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // Draw grid lines for testing piece alignment
+  ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+  ctx.lineWidth = 1;
+  for (let x = 0; x < 800; x += 100) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 600); ctx.stroke();
+  }
+  for (let y = 0; y < 600; y += 100) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(800, y); ctx.stroke();
+  }
+
+  // Draw some text
+  ctx.fillStyle = 'white';
+  ctx.font = 'bold 48px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('ART PUZZLE', 400, 300);
+  ctx.font = '20px sans-serif';
+  ctx.fillText('Test Image — 800x600', 400, 340);
+
+  // Output
+  const url = c.toDataURL('image/png');
+  const link = document.createElement('a');
+  link.download = 'test-image.png';
+  link.href = url;
+  document.body.appendChild(link);
+  link.innerHTML = 'Download test-image.png';
+  window.__testImageURL = url;
+  console.log('Test image generated. URL length:', url.length);
+})();
+</script>
+</body>
+</html>

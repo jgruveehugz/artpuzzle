@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>ArtPuzzle — Jigsaw Engine Test</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #app {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    /* Top bar */
+    #top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 16px;
+      background: #16213e;
+      border-bottom: 1px solid #0f3460;
+      min-height: 52px;
+      z-index: 10;
+      flex-shrink: 0;
+    }
+
+    .title-block { display: flex; flex-direction: column; gap: 2px; }
+    #puzzle-title { font-size: 16px; font-weight: 600; color: #e94560; }
+    #puzzle-artist { font-size: 12px; color: #888; }
+
+    .controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    .btn {
+      background: #0f3460;
+      color: #e0e0e0;
+      border: 1px solid #1a1a4e;
+      border-radius: 6px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    .btn:hover { background: #1a4a8e; }
+    .btn:active { background: #0a2550; }
+    .btn.active { background: #e94560; border-color: #e94560; color: #fff; }
+
+    select.btn {
+      appearance: none;
+      padding-right: 24px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23e0e0e0' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+    }
+
+    /* Progress bar */
+    #progress-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      min-width: 160px;
+    }
+    #progress-bar-bg {
+      flex: 1;
+      height: 8px;
+      background: #0f3460;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    #progress-bar {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #e94560, #f5a623);
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+    #progress-text { font-size: 12px; color: #888; min-width: 36px; text-align: right; }
+
+    /* Canvas area */
+    #canvas-wrapper {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    #puzzle-canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      touch-action: none;
+    }
+
+    /* Loading overlay */
+    #loading-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 46, 0.9);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 20;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid #0f3460;
+      border-top-color: #e94560;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #loading-text { font-size: 14px; color: #888; }
+
+    /* Completion overlay */
+    #completion-overlay {
+      position: absolute;
+      inset: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 15;
+      pointer-events: none;
+    }
+    #completion-overlay.show {
+      display: flex;
+      animation: fadeIn 1s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    #completion-overlay h2 {
+      font-size: 36px;
+      color: #e94560;
+      text-shadow: 0 0 20px rgba(233, 69, 96, 0.6);
+    }
+    #completion-overlay p { font-size: 16px; color: #ccc; }
+
+    /* Info panel */
+    #info-panel {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      background: rgba(22, 33, 62, 0.85);
+      border: 1px solid #0f3460;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 11px;
+      color: #888;
+      z-index: 5;
+      pointer-events: none;
+      max-width: 300px;
+    }
+    #info-panel .stat { display: flex; justify-content: space-between; gap: 12px; }
+    #info-panel .stat span:last-child { color: #e94560; font-weight: 600; }
+
+    .error {
+      color: #e94560;
+      font-size: 14px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+      #top-bar { flex-wrap: wrap; padding: 6px 10px; gap: 6px; }
+      .controls { gap: 4px; }
+      .btn { padding: 5px 8px; font-size: 12px; }
+      #progress-container { min-width: 100px; }
+      #puzzle-title { font-size: 14px; }
+      #puzzle-artist { font-size: 11px; }
+      #info-panel { font-size: 10px; max-width: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="top-bar">
+      <div class="title-block">
+        <span id="puzzle-title">Loading…</span>
+        <span id="puzzle-artist"></span>
+      </div>
+      <div class="controls">
+        <div id="progress-container">
+          <div id="progress-bar-bg"><div id="progress-bar"></div></div>
+          <span id="progress-text">0%</span>
+        </div>
+        <select id="difficulty-select" class="btn">
+          <option value="24">Easy (24)</option>
+          <option value="48">Medium (48)</option>
+          <option value="96">Hard (96)</option>
+          <option value="192">Expert (192)</option>
+        </select>
+        <button id="ghost-btn" class="btn">Ghost</button>
+        <button id="shuffle-btn" class="btn">Shuffle</button>
+        <button id="restart-btn" class="btn">Restart</button>
+        <button id="save-btn" class="btn">Save</button>
+      </div>
+    </div>
+    <div id="canvas-wrapper">
+      <canvas id="puzzle-canvas"></canvas>
+      <div id="loading-overlay">
+        <div class="spinner"></div>
+        <div id="loading-text">Loading puzzle…</div>
+      </div>
+      <div id="completion-overlay">
+        <h2>🎉 Puzzle Complete!</h2>
+        <p>Congratulations — you assembled the artwork.</p>
+      </div>
+      <div id="info-panel">
+        <div class="stat"><span>Pieces:</span> <span id="stat-pieces">—</span></div>
+        <div class="stat"><span>Groups:</span> <span id="stat-groups">—</span></div>
+        <div class="stat"><span>Largest:</span> <span id="stat-largest">—</span></div>
+        <div class="stat"><span>Scale:</span> <span id="stat-scale">—</span></div>
+        <div style="margin-top:6px; font-style:italic;">Drag pieces to snap. Scroll to zoom. Drag background to pan.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jigsaw-engine.js"></script>
+  <script src="js/jigsaw-board.js"></script>
+  <script src="js/jigsaw-interact.js"></script>
+  <script src="js/puzzle-app.js"></script>
+  <script>
+    /**
+     * Generate a colorful test image via canvas (avoids CORS issues with external URLs).
+     * Returns a data URL.
+     */
+    function generateTestImage() {
+      const c = document.createElement('canvas');
+      c.width = 800;
+      c.height = 600;
+      const ctx = c.getContext('2d');
+
+      // Gradient background
+      const grad = ctx.createLinearGradient(0, 0, 800, 600);
+      grad.addColorStop(0, '#1a1a2e');
+      grad.addColorStop(0.3, '#16213e');
+      grad.addColorStop(0.6, '#e94560');
+      grad.addColorStop(1, '#0f3460');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, 800, 600);
+
+      // Draw geometric shapes for visual variety (so pieces are distinguishable)
+      for (let i = 0; i < 40; i++) {
+        const hue = (i * 37) % 360;
+        ctx.fillStyle = `hsla(${hue}, 70%, 55%, 0.55)`;
+        const shape = i % 3;
+        const x = (i * 73) % 800;
+        const y = (i * 97) % 600;
+        const size = 25 + (i % 4) * 20;
+        ctx.beginPath();
+        if (shape === 0) {
+          ctx.arc(x, y, size, 0, Math.PI * 2);
+        } else if (shape === 1) {
+          ctx.rect(x - size/2, y - size/2, size, size);
+        } else {
+          ctx.moveTo(x, y - size);
+          ctx.lineTo(x + size, y + size);
+          ctx.lineTo(x - size, y + size);
+          ctx.closePath();
+        }
+        ctx.fill();
+      }
+
+      // Grid lines for testing piece alignment
+      ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x <= 800; x += 100) {
+        ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, 600); ctx.stroke();
+      }
+      for (let y = 0; y <= 600; y += 100) {
+        ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(800, y); ctx.stroke();
+      }
+
+      // Title text
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
+      ctx.font = 'bold 56px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('ART PUZZLE', 400, 280);
+      ctx.font = '22px sans-serif';
+      ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      ctx.fillText('Jigsaw Engine Test', 400, 330);
+      ctx.font = '14px sans-serif';
+      ctx.fillText('800 × 600', 400, 365);
+
+      return c.toDataURL('image/png');
+    }
+  </script>
+  <script>
+    (async function() {
+      const canvas = document.getElementById('puzzle-canvas');
+
+      // Default test image (Met Museum public domain — Great Wave off Kanagawa)
+      const REMOTE_IMAGE = 'https://images.metmuseum.org/CRDImages/as/original/DP369217.jpg';
+      const DEFAULT_IMAGE = generateTestImage();
+
+      const app = new PuzzleApp(canvas, {
+        image: DEFAULT_IMAGE,
+        difficulty: 48,
+        ghostImage: true,
+        title: 'The Great Wave off Kanagawa',
+        artist: 'Katsushika Hokusai, ca. 1830–32',
+        imageId: 'met-DP369217',
+        progressBar: document.getElementById('progress-bar'),
+        progressText: document.getElementById('progress-text'),
+        titleEl: document.getElementById('puzzle-title'),
+        artistEl: document.getElementById('puzzle-artist'),
+        difficultySelect: document.getElementById('difficulty-select'),
+        ghostBtn: document.getElementById('ghost-btn'),
+        shuffleBtn: document.getElementById('shuffle-btn'),
+        restartBtn: document.getElementById('restart-btn'),
+        saveBtn: document.getElementById('save-btn'),
+        loadingOverlay: document.getElementById('loading-overlay'),
+        completionOverlay: document.getElementById('completion-overlay'),
+      });
+
+      await app.init();
+
+      // Update info panel periodically
+      const statPieces = document.getElementById('stat-pieces');
+      const statGroups = document.getElementById('stat-groups');
+      const statLargest = document.getElementById('stat-largest');
+      const statScale = document.getElementById('stat-scale');
+
+      function updateStats() {
+        if (app.puzzle) {
+          statPieces.textContent = app.puzzle.pieces.length;
+          const stats = app.board.getGroupStats();
+          statGroups.textContent = stats.totalGroups;
+          statLargest.textContent = stats.maxGroupSize;
+          statScale.textContent = app.puzzle.scale.toFixed(2) + 'x';
+        }
+      }
+      setInterval(updateStats, 500);
+      updateStats();
+
+      // Expose for debugging
+      window.__puzzleApp = app;
+    })();
+  </script>
+</body>
+</html>

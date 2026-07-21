@@ -1,0 +1,403 @@
+/* ============================================
+   ArtPuzzle — Puzzle Player Page Styles
+   puzzle.css
+   ============================================ */
+
+.puzzle-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Top Bar --- */
+.puzzle-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 1rem;
+  min-height: 56px;
+}
+
+.puzzle-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.puzzle-back {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.puzzle-back:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.puzzle-title-block {
+  min-width: 0;
+}
+
+.puzzle-title-block h1 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.puzzle-title-block .artist {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.puzzle-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* --- Difficulty Selector --- */
+.difficulty-selector {
+  display: flex;
+  gap: 0;
+  background: var(--bg-primary);
+  border-radius: var(--radius);
+  padding: 2px;
+  border: 1px solid var(--border);
+}
+
+.difficulty-btn {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.difficulty-btn:hover {
+  color: var(--text-primary);
+}
+
+.difficulty-btn.active {
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+/* --- Progress Bar --- */
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 140px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* --- Share Button --- */
+.btn-share {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+
+.btn-share:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Canvas Area --- */
+.puzzle-canvas-wrapper {
+  flex: 1;
+  position: relative;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+#puzzle-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+/* --- Loading Overlay --- */
+.puzzle-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--bg-primary);
+  z-index: 10;
+}
+
+.puzzle-loading.hidden {
+  display: none;
+}
+
+.puzzle-loading .loading-spinner::after {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+.puzzle-loading p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* --- Error State --- */
+.puzzle-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  z-index: 10;
+}
+
+.puzzle-error h2 {
+  font-size: 1.5rem;
+  color: var(--danger);
+}
+
+.puzzle-error p {
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+/* --- Controls Bar --- */
+.puzzle-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  min-height: 48px;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.control-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.control-btn.active {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.control-btn svg,
+.control-btn .icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- Completion View --- */
+.completion-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26, 26, 46, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.completion-overlay.visible {
+  display: flex;
+}
+
+.completion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 60px rgba(201, 168, 76, 0.15);
+  animation: completionFadeIn 0.5s ease;
+}
+
+@keyframes completionFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.completion-card .trophy {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.completion-card h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.completion-card .completion-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.completion-image {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+.completion-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.completion-stat {
+  text-align: center;
+}
+
+.completion-stat .stat-value {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: bold;
+}
+
+.completion-stat .stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.completion-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .puzzle-topbar {
+    flex-wrap: wrap;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .puzzle-title-block h1 {
+    font-size: 0.95rem;
+  }
+
+  .puzzle-title-block .artist {
+    font-size: 0.75rem;
+  }
+
+  .progress-container {
+    min-width: 100px;
+  }
+
+  .difficulty-selector {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .puzzle-controls {
+    gap: 0.3rem;
+  }
+
+  .control-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .control-btn .label {
+    display: none;
+  }
+
+  .completion-card {
+    padding: 1.5rem;
+  }
+
+  .completion-card h2 {
+    font-size: 1.4rem;
+  }
+}

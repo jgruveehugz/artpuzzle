@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Puzzle — ArtPuzzle</title>
+  <meta name="description" content="Solve an art jigsaw puzzle.">
+  <link rel="preconnect" href="https://images.metmuseum.org">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/puzzle.css">
+</head>
+<body class="puzzle-page">
+
+  <!-- Top Bar -->
+  <header class="puzzle-topbar">
+    <div class="puzzle-topbar-left">
+      <a href="gallery.html" class="puzzle-back" aria-label="Back to gallery">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span class="label">Gallery</span>
+      </a>
+      <div class="puzzle-title-block">
+        <h1 id="puzzle-title">Loading…</h1>
+        <span class="artist" id="puzzle-artist"></span>
+      </div>
+    </div>
+    <div class="puzzle-topbar-right">
+      <!-- Difficulty Selector -->
+      <div class="difficulty-selector" role="group" aria-label="Select difficulty">
+        <button class="difficulty-btn" data-pieces="24">Easy</button>
+        <button class="difficulty-btn active" data-pieces="48">Medium</button>
+        <button class="difficulty-btn" data-pieces="96">Hard</button>
+        <button class="difficulty-btn" data-pieces="192">Expert</button>
+      </div>
+      <!-- Progress -->
+      <div class="progress-container">
+        <div class="progress-bar" role="progressbar" aria-label="Puzzle progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="progress-text" id="progress-text">0%</span>
+      </div>
+      <!-- Share -->
+      <button class="btn-share" id="btn-share" aria-label="Share puzzle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/>
+        </svg>
+        <span class="label">Share</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Canvas Area -->
+  <main class="puzzle-canvas-wrapper" id="canvas-wrapper">
+    <!-- Loading -->
+    <div class="puzzle-loading" id="puzzle-loading">
+      <div class="loading-spinner"></div>
+      <p>Loading puzzle…</p>
+    </div>
+
+    <!-- Error -->
+    <div class="puzzle-error" id="puzzle-error" style="display:none;">
+      <h2>Puzzle Not Found</h2>
+      <p id="puzzle-error-msg">We couldn't find that puzzle. It may have been removed or the link is incorrect.</p>
+      <a href="gallery.html" class="btn btn-primary">Browse Gallery</a>
+    </div>
+
+    <!-- Canvas (jigsaw engine renders here) -->
+    <canvas id="puzzle-canvas" aria-label="Jigsaw puzzle canvas"></canvas>
+  </main>
+
+  <!-- Controls Bar -->
+  <footer class="puzzle-controls">
+    <button class="control-btn" id="btn-ghost" aria-label="Toggle ghost image">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+        <circle cx="12" cy="12" r="3"/>
+      </svg>
+      <span class="label">Ghost</span>
+    </button>
+    <button class="control-btn" id="btn-shuffle" aria-label="Shuffle pieces">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 3l5 5-5 5M21 8H8a5 5 0 0 0-5 5M8 21l-5-5 5-5M3 16h13a5 5 0 0 0 5-5"/>
+      </svg>
+      <span class="label">Shuffle</span>
+    </button>
+    <button class="control-btn" id="btn-restart" aria-label="Restart puzzle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/>
+      </svg>
+      <span class="label">Restart</span>
+    </button>
+  </footer>
+
+  <!-- Completion View -->
+  <div class="completion-overlay" id="completion-overlay" role="dialog" aria-modal="true" aria-labelledby="completion-title">
+    <div class="completion-card">
+      <div class="trophy">🏆</div>
+      <h2 id="completion-title">Puzzle Complete!</h2>
+      <p class="completion-subtitle">You solved it. Beautiful work.</p>
+      <img class="completion-image" id="completion-image" src="" alt="Completed puzzle artwork">
+      <div class="completion-stats">
+        <div class="completion-stat">
+          <div class="stat-value" id="completion-time">--:--</div>
+          <div class="stat-label">Time</div>
+        </div>
+        <div class="completion-stat">
+          <div class="stat-value" id="completion-pieces">48</div>
+          <div class="stat-label">Pieces</div>
+        </div>
+      </div>
+      <div class="completion-actions">
+        <a href="gallery.html" class="btn btn-primary">Play Another</a>
+        <button class="btn btn-secondary" id="btn-replay">Replay This</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Jigsaw Engine Scripts (created by another agent) -->
+  <script src="js/jigsaw-engine.js"></script>
+  <script src="js/jigsaw-interact.js"></script>
+  <script src="js/jigsaw-board.js"></script>
+  <script src="js/puzzle-app.js"></script>
+
+  <!-- Metadata loader: displays puzzle title/artist even before
+       the jigsaw engine (puzzle-app.js) is implemented -->
+  <script>
+  (function () {
+    "use strict";
+
+    var urlParams = new URLSearchParams(window.location.search);
+    var puzzleId = urlParams.get("id");
+
+    var titleEl = document.getElementById("puzzle-title");
+    var artistEl = document.getElementById("puzzle-artist");
+    var loadingEl = document.getElementById("puzzle-loading");
+    var errorEl = document.getElementById("puzzle-error");
+    var errorMsg = document.getElementById("puzzle-error-msg");
+
+    function showError(msg) {
+      if (loadingEl) loadingEl.style.display = "none";
+      if (errorEl) {
+        errorEl.style.display = "flex";
+        if (msg && errorMsg) errorMsg.textContent = msg;
+      }
+    }
+
+    function applyPuzzle(puzzle) {
+      if (titleEl) titleEl.textContent = puzzle.title || "Untitled";
+      if (artistEl) artistEl.textContent = puzzle.artist || "Unknown artist";
+      document.title = (puzzle.title || "Puzzle") + " — ArtPuzzle";
+
+      // Update completion view image source
+      var compImg = document.getElementById("completion-image");
+      if (compImg && puzzle.image) compImg.src = puzzle.image;
+    }
+
+    // If puzzle-app.js is loaded and takes over, it will hide the loading
+    // overlay itself. This script only fills in the metadata.
+    fetch("data/puzzles.json?v=" + Date.now())
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (puzzles) {
+        if (!puzzleId) {
+          showError("No puzzle ID specified. Pick a puzzle from the gallery.");
+          return;
+        }
+        var puzzle = puzzles.find(function (p) {
+          return p.id === puzzleId;
+        });
+        if (!puzzle) {
+          showError(
+            'Puzzle "' + puzzleId + '" was not found in the collection.'
+          );
+          return;
+        }
+        applyPuzzle(puzzle);
+
+        // Boot the jigsaw engine with this puzzle's data
+        bootEngine(puzzle);
+
+        // If the jigsaw engine isn't loaded, show placeholder
+        if (typeof JigsawPuzzle === "undefined" && typeof window.PuzzleApp === "undefined") {
+          if (loadingEl) {
+            loadingEl.innerHTML =
+              '<div style="text-align:center;padding:2rem;">' +
+              '<p style="font-size:1.1rem;color:var(--text-primary);margin-bottom:0.5rem;">' +
+              (puzzle.title || "Puzzle") + "</p>" +
+              '<p style="color:var(--text-secondary);font-size:0.9rem;">' +
+              "Jigsaw engine loading… The puzzle player will appear here once the engine initializes." +
+              "</p></div>";
+          }
+        }
+      })
+      .catch(function () {
+        showError(
+          "Could not load puzzle data. The collection may not be available yet."
+        );
+      });
+
+    // --- Initialize the jigsaw engine ---
+    window.ArtPuzzle = window.ArtPuzzle || {};
+    window.ArtPuzzle.updateProgress = function (percent) {
+      var fill = document.getElementById("progress-fill");
+      var text = document.getElementById("progress-text");
+      var bar = document.querySelector(".progress-bar");
+      if (fill) fill.style.width = percent + "%";
+      if (text) text.textContent = Math.round(percent) + "%";
+      if (bar) bar.setAttribute("aria-valuenow", String(Math.round(percent)));
+    };
+
+    window.ArtPuzzle.showCompletion = function (timeStr, pieces) {
+      var overlay = document.getElementById("completion-overlay");
+      if (!overlay) return;
+      if (timeStr) {
+        var t = document.getElementById("completion-time");
+        if (t) t.textContent = timeStr;
+      }
+      if (pieces) {
+        var p = document.getElementById("completion-pieces");
+        if (p) p.textContent = pieces;
+      }
+      overlay.classList.add("visible");
+    };
+
+    // Boot the jigsaw engine once puzzle data is loaded
+    function bootEngine(puzzleData) {
+      if (typeof JigsawPuzzle === "undefined" || typeof PuzzleApp === "undefined") {
+        console.log("Jigsaw engine not loaded — showing metadata only");
+        return;
+      }
+
+      var canvas = document.getElementById("puzzle-canvas");
+      if (!canvas) { console.error("No canvas element found"); return; }
+
+      // Determine difficulty from active button or default to 48
+      var activeBtn = document.querySelector(".difficulty-btn.active");
+      var difficulty = activeBtn ? parseInt(activeBtn.dataset.pieces, 10) : 48;
+
+      var loadingEl = document.getElementById("puzzle-loading");
+
+      var app = new PuzzleApp(canvas, {
+        image: puzzleData.image,
+        imageId: puzzleData.id,
+        difficulty: difficulty,
+        progressBar: document.getElementById("progress-fill"),
+        progressText: document.getElementById("progress-text"),
+        titleEl: document.getElementById("puzzle-title"),
+        artistEl: document.getElementById("puzzle-artist"),
+        loadingOverlay: loadingEl,
+        completionOverlay: document.getElementById("completion-overlay"),
+        ghostBtn: document.getElementById("btn-ghost"),
+        shuffleBtn: document.getElementById("btn-shuffle"),
+        restartBtn: document.getElementById("btn-restart"),
+        saveBtn: document.getElementById("btn-save")
+      });
+
+      window.__puzzleApp = app;
+
+      app.init().then(function() {
+        console.log("Puzzle engine initialized successfully");
+        if (loadingEl) loadingEl.style.display = "none";
+      }).catch(function(err) {
+        console.error("Puzzle engine init failed:", err);
+        if (loadingEl) {
+          loadingEl.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--text-primary);">' +
+            '<p>Error loading puzzle: ' + (err.message || err) + '</p></div>';
+        }
+      });
+
+      // Wire difficulty changes
+      document.querySelectorAll(".difficulty-btn").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var pieces = parseInt(btn.dataset.pieces, 10);
+          if (window.__puzzleApp) {
+            window.__puzzleApp.changeDifficulty(pieces);
+          }
+        });
+      });
+    }
+
+    // Share button
+    var shareBtn = document.getElementById("btn-share");
+    if (shareBtn) {
+      shareBtn.addEventListener("click", function () {
+        var url = window.location.href;
+        if (navigator.share) {
+          navigator.share({ url: url }).catch(function () {});
+        } else if (navigator.clipboard) {
+          navigator.clipboard.writeText(url).then(function () {
+            shareBtn.classList.add("active");
+            setTimeout(function () {
+              shareBtn.classList.remove("active");
+            }, 1500);
+          });
+        }
+      });
+    }
+
+    // Control buttons dispatch events the engine can listen for
+    var ghostBtn = document.getElementById("btn-ghost");
+    if (ghostBtn) {
+      ghostBtn.addEventListener("click", function () {
+        ghostBtn.classList.toggle("active");
+        document.dispatchEvent(new CustomEvent("artpuzzle:toggleGhost"));
+      });
+    }
+
+    var shuffleBtn = document.getElementById("btn-shuffle");
+    if (shuffleBtn) {
+      shuffleBtn.addEventListener("click", function () {
+        document.dispatchEvent(new CustomEvent("artpuzzle:shuffle"));
+      });
+    }
+
+    var restartBtn = document.getElementById("btn-restart");
+    if (restartBtn) {
+      restartBtn.addEventListener("click", function () {
+        document.dispatchEvent(new CustomEvent("artpuzzle:restart"));
+      });
+    }
+
+    var replayBtn = document.getElementById("btn-replay");
+    if (replayBtn) {
+      replayBtn.addEventListener("click", function () {
+        var overlay = document.getElementById("completion-overlay");
+        if (overlay) overlay.classList.remove("visible");
+        document.dispatchEvent(new CustomEvent("artpuzzle:restart"));
+      });
+    }
+
+    // Progress bar update helper (engine can call this)
+    window.ArtPuzzle = window.ArtPuzzle || {};
+    window.ArtPuzzle.updateProgress = function (percent) {
+      var fill = document.getElementById("progress-fill");
+      var text = document.getElementById("progress-text");
+      var bar = document.querySelector(".progress-bar");
+      if (fill) fill.style.width = percent + "%";
+      if (text) text.textContent = Math.round(percent) + "%";
+      if (bar) bar.setAttribute("aria-valuenow", String(Math.round(percent)));
+    };
+
+    window.ArtPuzzle.showCompletion = function (timeStr, pieces) {
+      var overlay = document.getElementById("completion-overlay");
+      if (!overlay) return;
+      if (timeStr) {
+        var t = document.getElementById("completion-time");
+        if (t) t.textContent = timeStr;
+      }
+      if (pieces) {
+        var p = document.getElementById("completion-pieces");
+        if (p) p.textContent = pieces;
+      }
+      overlay.classList.add("visible");
+    };
+  })();
+  </script>
+</body>
+</html>
