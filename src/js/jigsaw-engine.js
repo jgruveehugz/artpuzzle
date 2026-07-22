@@ -39,6 +39,78 @@ const DIFFICULTY_GRIDS = {
 const TAB_RATIO = 0.22;
 const SNAP_TOLERANCE = 15;
 
+// ─── Sound FX (synthesized, no audio files) ──────────────────────────────────
+const SoundFX = {
+  _ctx: null,
+  _ensure() {
+    if (!this._ctx) {
+      try {
+        this._ctx = new (window.AudioContext || window.webkitAudioContext)();
+      } catch (e) { /* audio unsupported */ }
+    }
+    // Resume if suspended (browser autoplay policy)
+    if (this._ctx && this._ctx.state === 'suspended') {
+      this._ctx.resume();
+    }
+    return this._ctx;
+  },
+  // Short satisfying "click" for piece snap.
+  click() {
+    const ctx = this._ensure();
+    if (!ctx) return;
+    const t = ctx.currentTime;
+    // Noise burst through a bandpass for a woody "clack"
+    const dur = 0.07;
+    const buffer = ctx.createBuffer(1, ctx.sampleRate * dur, ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) {
+      data[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / data.length, 2);
+    }
+    const src = ctx.createBufferSource();
+    src.buffer = buffer;
+    const bp = ctx.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.value = 1800;
+    bp.Q.value = 1.2;
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0.5, t);
+    g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+    src.connect(bp).connect(g).connect(ctx.destination);
+    src.start(t);
+    src.stop(t + dur);
+    // Low "thunk" body
+    const osc = ctx.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(320, t);
+    osc.frequency.exponentialRampToValueAtTime(90, t + 0.09);
+    const og = ctx.createGain();
+    og.gain.setValueAtTime(0.35, t);
+    og.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
+    osc.connect(og).connect(ctx.destination);
+    osc.start(t);
+    osc.stop(t + 0.1);
+  },
+  // Ascending chime for puzzle completion.
+  win() {
+    const ctx = this._ensure();
+    if (!ctx) return;
+    const notes = [523.25, 659.25, 783.99, 1046.5]; // C5 E5 G5 C6
+    notes.forEach((freq, i) => {
+      const t = ctx.currentTime + i * 0.13;
+      const osc = ctx.createOscillator();
+      osc.type = 'triangle';
+      osc.frequency.value = freq;
+      const g = ctx.createGain();
+      g.gain.setValueAtTime(0.0001, t);
+      g.gain.exponentialRampToValueAtTime(0.3, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.001, t + 0.4);
+      osc.connect(g).connect(ctx.destination);
+      osc.start(t);
+      osc.stop(t + 0.45);
+    });
+  }
+};
+
 // ─── Edge type constants ─────────────────────────────────────────────────────
 const FLAT = 0;
 const TAB = 1;
@@ -315,6 +387,7 @@ class JigsawPuzzle extends Emitter {
     this.tabSize = 0;
     this.completed = false;
     this.completionAnim = 0; // 0→1 animation progress
+    this.peekActive = false; // hold-to-peek reference image
 
     // View transform (set by board/interact modules)
     this.scale = 1;
@@ -340,12 +413,26 @@ class JigsawPuzzle extends Emitter {
       w = Math.round(w * s);
       h = Math.round(h * s);
     }
+
+    // Round image dimensions so each grid cell is an integer number of pixels.
+    // This eliminates sub-pixel seams between adjacent pieces.
+    this.cellW = Math.max(40, Math.round(w / this.cols));
+    this.cellH = Math.max(40, Math.round(h / this.rows));
+    w = this.cellW * this.cols;
+    h = this.cellH * this.rows;
+
     this.imageW = w;
     this.imageH = h;
 
-    this.cellW = w / this.cols;
-    this.cellH = h / this.rows;
-    this.tabSize = Math.min(this.cellW, this.cellH) * TAB_RATIO;
+    this.tabSize = Math.round(Math.min(this.cellW, this.cellH) * TAB_RATIO);
+
+    // Pre-scale the source image to exact grid dimensions so piece crops
+    // align perfectly with no sub-pixel drift.
+    const scaled = document.createElement('canvas');
+    scaled.width = w;
+    scaled.height = h;
+    scaled.getContext('2d').drawImage(img, 0, 0, w, h);
+    this.image = scaled;
 
     // Generate pieces
     const seed = `${this.imageId}:${this.difficulty}`;
@@ -536,6 +623,9 @@ class JigsawPuzzle extends Emitter {
           // Glow effect
           this._triggerGlow(dragGroup.pieces);
 
+          // Snap sound
+          SoundFX.click();
+
           this.emit('pieceSnap', piece.id);
           this._updateProgress();
           return true;
@@ -667,6 +757,7 @@ class JigsawPuzzle extends Emitter {
       this.completionAnim = 0.01;
       this._snapAllToSolved();
       this._startAnim();
+      SoundFX.win();
       this.emit('complete');
     }
   }
@@ -691,6 +782,34 @@ class JigsawPuzzle extends Emitter {
     ctx.fillRect(0, 0, W, H);
 
     if (this.pieces.length === 0) return;
+
+    // ─── Peek mode: show full original image, fade pieces out ───────────────────
+    if (this.peekActive) {
+      ctx.save();
+      ctx.translate(offsetX, offsetY);
+      ctx.scale(scale, scale);
+      // Full-opacity original at board position
+      ctx.globalAlpha = 1;
+      ctx.drawImage(this.image, 0, 0, this.imageW, this.imageH);
+      // Pieces faded back
+      ctx.globalAlpha = 0.12;
+      const sortedPeek = [...this.groups].sort((a, b) => a.zIndex - b.zIndex);
+      for (const group of sortedPeek) {
+        for (const piece of group.pieces) {
+          ctx.drawImage(piece.canvas, piece.x - piece.pad, piece.y - piece.pad);
+        }
+      }
+      ctx.restore();
+      // Border highlight around the reference
+      ctx.save();
+      ctx.translate(offsetX, offsetY);
+      ctx.scale(scale, scale);
+      ctx.strokeStyle = 'rgba(201,168,76,0.8)';
+      ctx.lineWidth = 3 / scale;
+      ctx.strokeRect(0, 0, this.imageW, this.imageH);
+      ctx.restore();
+      return;
+    }
 
     // Draw ghost image (faint outline of completed puzzle at board position)
     if (this.ghostEnabled) {
@@ -846,6 +965,13 @@ class JigsawPuzzle extends Emitter {
     this.ghostEnabled = !this.ghostEnabled;
     this.render();
     return this.ghostEnabled;
+  }
+
+  // ─── Peek: hold to view the full reference image ──────────────────────────────
+  setPeek(active) {
+    if (this.peekActive === active) return;
+    this.peekActive = active;
+    this.render();
   }
 
   // ─── Restart: re-scatter pieces ──────────────────────────────────────────────

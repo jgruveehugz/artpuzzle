@@ -79,6 +79,14 @@
       </svg>
       <span class="label">Ghost</span>
     </button>
+    <button class="control-btn" id="btn-peek" aria-label="Hold to view full image">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <path d="M21 15l-5-5L5 21"/>
+      </svg>
+      <span class="label">Peek</span>
+    </button>
     <button class="control-btn" id="btn-shuffle" aria-label="Shuffle pieces">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M16 3l5 5-5 5M21 8H8a5 5 0 0 0-5 5M8 21l-5-5 5-5M3 16h13a5 5 0 0 0 5-5"/>
@@ -118,10 +126,10 @@
   </div>
 
   <!-- Jigsaw Engine Scripts (created by another agent) -->
-  <script src="js/jigsaw-engine.js?v=3"></script>
-  <script src="js/jigsaw-interact.js?v=3"></script>
-  <script src="js/jigsaw-board.js?v=3"></script>
-  <script src="js/puzzle-app.js?v=3"></script>
+  <script src="js/jigsaw-engine.js?v=4"></script>
+  <script src="js/jigsaw-interact.js?v=4"></script>
+  <script src="js/jigsaw-board.js?v=4"></script>
+  <script src="js/puzzle-app.js?v=4"></script>
 
   <!-- Metadata loader: displays puzzle title/artist even before
        the jigsaw engine (puzzle-app.js) is implemented -->
@@ -282,6 +290,28 @@
           }
         });
       });
+
+      // Peek button: press-and-hold to view reference image
+      var peekBtn = document.getElementById("btn-peek");
+      if (peekBtn) {
+        var peekStart = function(e) {
+          e.preventDefault();
+          peekBtn.classList.add("active");
+          if (window.__puzzleApp && window.__puzzleApp.puzzle) {
+            window.__puzzleApp.puzzle.setPeek(true);
+          }
+        };
+        var peekEnd = function() {
+          peekBtn.classList.remove("active");
+          if (window.__puzzleApp && window.__puzzleApp.puzzle) {
+            window.__puzzleApp.puzzle.setPeek(false);
+          }
+        };
+        peekBtn.addEventListener("pointerdown", peekStart);
+        peekBtn.addEventListener("pointerup", peekEnd);
+        peekBtn.addEventListener("pointerleave", peekEnd);
+        peekBtn.addEventListener("pointercancel", peekEnd);
+      }
     }
 
     // Share button

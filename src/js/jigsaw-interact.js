@@ -59,10 +59,22 @@ class PointerInput {
     c.addEventListener('pointercancel', (e) => this._onUp(e));
     c.addEventListener('pointerleave', (e) => this._onUp(e));
 
+    // Right-mouse-button hold = peek at reference image (desktop)
+    c.addEventListener('mousedown', (e) => {
+      if (e.button === 2) { e.preventDefault(); this.puzzle.setPeek(true); }
+    });
+    c.addEventListener('mouseup', (e) => {
+      if (e.button === 2) { this.puzzle.setPeek(false); }
+    });
+    // If mouse leaves canvas while RMB held, stop peek
+    c.addEventListener('mouseleave', () => {
+      if (this.puzzle.peekActive) this.puzzle.setPeek(false);
+    });
+
     // Wheel zoom on desktop
     c.addEventListener('wheel', (e) => this._onWheel(e), { passive: false });
 
-    // Prevent context menu on long-press
+    // Prevent context menu (so RMB peek doesn't trigger it)
     c.addEventListener('contextmenu', (e) => e.preventDefault());
   }
 
