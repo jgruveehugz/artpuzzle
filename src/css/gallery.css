@@ -1,17 +1,19 @@
 /* ============================================
-   ArtPuzzle — Gallery Page Styles
+   ArtPuzzle — Gallery & Landing Styles
    gallery.css
    ============================================ */
 
-/* --- Hero / Landing --- */
+/* ============================================
+   HERO — the artwork is the hero. Big, confident,
+   museum-label typography over a properly-lit image.
+   ============================================ */
 .hero {
   position: relative;
-  min-height: 520px;
+  min-height: 78vh;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
   background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
 }
 
 .hero-bg {
@@ -24,61 +26,72 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  object-position: center 30%;
+  opacity: 0.85;
+  transform: scale(1.02);
 }
 
+/* Scrim: strong at the text edge, lets the art breathe elsewhere */
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    var(--bg-primary) 0%,
-    rgba(26, 26, 46, 0.85) 40%,
-    rgba(26, 26, 46, 0.4) 100%
+    180deg,
+    rgba(15, 15, 20, 0.1) 0%,
+    rgba(15, 15, 20, 0.35) 55%,
+    rgba(15, 15, 20, 0.88) 100%
   );
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 600px;
-  padding: 2rem 0;
+  width: 100%;
+  padding-bottom: 4.5rem;
 }
 
-.hero-eyebrow {
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 0.75rem;
-}
+.hero .eyebrow { color: var(--accent-hover); }
+.hero .eyebrow::before { background: var(--accent-hover); }
 
 .hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: clamp(2.25rem, 5vw, var(--text-4xl));
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--text-primary);
+  max-width: 18ch;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.6);
 }
 
 .hero-artist {
-  font-size: 1.15rem;
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
   font-style: italic;
+  font-weight: 500;
+  color: rgba(242, 240, 234, 0.85);
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero-meta {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
   flex-wrap: wrap;
 }
 
-.hero-meta span {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+.hero-meta .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  color: rgba(242, 240, 234, 0.7);
+  letter-spacing: 0.02em;
 }
+
+.hero-meta .meta-item svg { opacity: 0.7; }
 
 .hero-actions {
   display: flex;
@@ -86,18 +99,21 @@
   flex-wrap: wrap;
 }
 
-/* --- Category Grid (Landing) --- */
+/* ============================================
+   CATEGORY GRID — gallery wall. Art-forward:
+   big image, label sits quiet beneath.
+   ============================================ */
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .category-card {
-  background: var(--bg-card);
+  background: transparent;
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--border);
   transition: all var(--transition);
   cursor: pointer;
   display: flex;
@@ -106,66 +122,93 @@
 
 .category-card:hover {
   transform: translateY(-4px);
+  border-color: var(--accent-dim);
   box-shadow: var(--shadow-hover);
-  border-color: var(--accent);
+}
+
+.category-card-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg-secondary);
 }
 
 .category-card-thumb {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 100%;
   object-fit: cover;
-  background: var(--bg-secondary);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.category-card-body {
-  padding: 1rem 1.25rem;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 0.5rem;
+.category-card:hover .category-card-thumb {
+  transform: scale(1.04);
 }
 
-.category-card-name {
-  font-size: 1.25rem;
+.category-card-count-pill {
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(15, 15, 20, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text-primary);
 }
 
-.category-card-count {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+.category-card-body {
+  padding: 1.25rem 1.5rem 1.5rem;
 }
 
-/* --- Gallery Toolbar --- */
+.category-card-name {
+  font-size: var(--text-xl);
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.category-card-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* ============================================
+   GALLERY TOOLBAR — quiet, utilitarian
+   ============================================ */
 .gallery-toolbar {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  background: var(--bg-card);
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .search-box {
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
   position: relative;
 }
 
 .search-box input {
   width: 100%;
-  padding: 0.6rem 1rem 0.6rem 2.5rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
+  padding: 0.7rem 1rem 0.7rem 2.6rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   font-family: var(--font-body);
   transition: border-color var(--transition);
 }
+
+.search-box input::placeholder { color: var(--text-muted); }
 
 .search-box input:focus {
   outline: none;
@@ -175,26 +218,26 @@
 .search-box::before {
   content: "🔍";
   position: absolute;
-  left: 0.75rem;
+  left: 0.9rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 0.9rem;
-  opacity: 0.6;
+  font-size: 0.85rem;
+  opacity: 0.5;
 }
 
 .filter-select {
-  padding: 0.6rem 2rem 0.6rem 1rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
+  padding: 0.7rem 2.2rem 0.7rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   font-family: var(--font-body);
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a0a0b8' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a8a69e' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.7rem center;
+  background-position: right 0.8rem center;
   transition: border-color var(--transition);
 }
 
@@ -204,24 +247,26 @@
 }
 
 .gallery-count {
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   white-space: nowrap;
+  letter-spacing: 0.02em;
 }
 
-/* --- Puzzle Grid --- */
+/* ============================================
+   PUZZLE GRID + CARD — art-first, label quiet
+   ============================================ */
 .puzzle-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-/* --- Puzzle Card --- */
 .puzzle-card {
-  background: var(--bg-card);
+  background: transparent;
+  border: 1px solid var(--border-soft);
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--border);
   transition: all var(--transition);
   display: flex;
   flex-direction: column;
@@ -229,8 +274,8 @@
 
 .puzzle-card:hover {
   transform: translateY(-4px);
+  border-color: var(--accent-dim);
   box-shadow: var(--shadow-hover);
-  border-color: var(--accent);
 }
 
 .puzzle-card-image {
@@ -245,17 +290,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .puzzle-card:hover .puzzle-card-image img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .puzzle-card-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(26, 26, 46, 0.7);
+  background: rgba(15, 15, 20, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -267,32 +312,43 @@
   opacity: 1;
 }
 
+.puzzle-card-overlay .btn-play {
+  transform: translateY(4px);
+  transition: transform var(--transition);
+}
+
+.puzzle-card:hover .puzzle-card-overlay .btn-play {
+  transform: translateY(0);
+}
+
 .puzzle-card-difficulty {
   position: absolute;
-  top: 0.6rem;
-  right: 0.6rem;
+  top: 0.85rem;
+  right: 0.85rem;
   z-index: 1;
 }
 
 .puzzle-card-body {
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem 1.5rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
 .puzzle-card-title {
-  font-size: 1.1rem;
+  font-size: var(--text-lg);
+  font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
   line-height: 1.3;
 }
 
 .puzzle-card-artist {
-  font-size: 0.85rem;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
   color: var(--text-secondary);
   font-style: italic;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .puzzle-card-footer {
@@ -300,20 +356,22 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
 }
 
 .puzzle-card-meta {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .puzzle-card .btn-play {
-  padding: 0.4rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem;
+  font-size: var(--text-sm);
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #14140f;
   border-radius: var(--radius);
   font-weight: 600;
   transition: all var(--transition);
@@ -323,34 +381,19 @@
   background: var(--accent-hover);
 }
 
-/* --- Responsive --- */
-@media (max-width: 640px) {
-  .hero {
-    min-height: 400px;
-  }
-
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .gallery-toolbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .filter-select {
-    width: 100%;
-  }
-
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero { min-height: 62vh; }
+  .hero-content { padding-bottom: 3rem; }
+  .gallery-toolbar { flex-direction: column; align-items: stretch; }
+  .filter-select { width: 100%; }
   .puzzle-grid,
-  .category-grid {
-    grid-template-columns: 1fr;
-  }
+  .category-grid { grid-template-columns: 1fr; }
 }
 
-@media (min-width: 641px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .puzzle-grid,
-  .category-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
+  .category-grid { grid-template-columns: repeat(2, 1fr); }
 }

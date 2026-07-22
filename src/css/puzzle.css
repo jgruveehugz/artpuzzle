@@ -265,7 +265,7 @@
   display: none;
   align-items: center;
   justify-content: center;
-  background: rgba(26, 26, 46, 0.95);
+  background: rgba(15, 15, 20, 0.95);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
