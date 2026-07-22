@@ -162,7 +162,7 @@ class PuzzleApp {
   // ─── Completion callback ─────────────────────────────────────────────────────
   _onComplete() {
     if (this.ui.completionOverlay) {
-      this.ui.completionOverlay.classList.add('show');
+      this.ui.completionOverlay.classList.add('visible');
     }
     // Auto-save final state
     this.puzzle.save();

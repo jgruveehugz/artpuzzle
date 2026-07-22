@@ -118,10 +118,10 @@
   </div>
 
   <!-- Jigsaw Engine Scripts (created by another agent) -->
-  <script src="js/jigsaw-engine.js?v=2"></script>
-  <script src="js/jigsaw-interact.js?v=2"></script>
-  <script src="js/jigsaw-board.js?v=2"></script>
-  <script src="js/puzzle-app.js?v=2"></script>
+  <script src="js/jigsaw-engine.js?v=3"></script>
+  <script src="js/jigsaw-interact.js?v=3"></script>
+  <script src="js/jigsaw-board.js?v=3"></script>
+  <script src="js/puzzle-app.js?v=3"></script>
 
   <!-- Metadata loader: displays puzzle title/artist even before
        the jigsaw engine (puzzle-app.js) is implemented -->
@@ -245,6 +245,8 @@
       var app = new PuzzleApp(canvas, {
         image: puzzleData.image,
         imageId: puzzleData.id,
+        title: puzzleData.title,
+        artist: puzzleData.artist,
         difficulty: difficulty,
         progressBar: document.getElementById("progress-fill"),
         progressText: document.getElementById("progress-text"),
