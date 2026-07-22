@@ -198,7 +198,9 @@ class PieceGroup {
 // Draws a single edge of a piece into a Path2D.
 // 'type' is FLAT, TAB (outward bump), or BLANK (inward notch).
 // The edge goes from (x1,y1) to (x2,y2). 'normal' is [nx, ny] pointing outward.
-function traceEdge(path, x1, y1, x2, y2, type) {
+// tabSize is passed in (uniform across the whole puzzle) so the source image
+// crop always covers the full tab reach — no dark gaps at connectors.
+function traceEdge(path, x1, y1, x2, y2, type, tabSize) {
   if (type === FLAT) {
     path.lineTo(x2, y2);
     return;
@@ -215,7 +217,7 @@ function traceEdge(path, x1, y1, x2, y2, type) {
   const ny = -ux;
 
   const dir = type; // +1 for TAB (outward), -1 for BLANK (inward)
-  const tabSize = len * TAB_RATIO;
+  // tabSize is the uniform puzzle-wide value passed in (NOT len * TAB_RATIO).
   const n = dir; // normal multiplier
 
   // Points along the edge in parametric form: P(t) = (x1 + ux*len*t, y1 + uy*len*t)
@@ -274,16 +276,16 @@ function buildPiecePath(piece, cellW, cellH, tabSize) {
   path.moveTo(0, 0);
 
   // Top edge: left → right
-  traceEdge(path, 0, 0, cellW, 0, e.top);
+  traceEdge(path, 0, 0, cellW, 0, e.top, tabSize);
 
   // Right edge: top → bottom
-  traceEdge(path, cellW, 0, cellW, cellH, e.right);
+  traceEdge(path, cellW, 0, cellW, cellH, e.right, tabSize);
 
   // Bottom edge: right → left
-  traceEdge(path, cellW, cellH, 0, cellH, e.bottom);
+  traceEdge(path, cellW, cellH, 0, cellH, e.bottom, tabSize);
 
   // Left edge: bottom → top
-  traceEdge(path, 0, cellH, 0, 0, e.left);
+  traceEdge(path, 0, cellH, 0, 0, e.left, tabSize);
 
   path.closePath();
   return path;
@@ -524,6 +526,16 @@ class JigsawPuzzle extends Emitter {
 
     ctx.drawImage(this.image, sx, sy, sw, sh, dx, dy, sw, sh);
 
+    // Edge bleed: re-draw the image offset by 1px in each cardinal direction at
+    // partial alpha. This fills the anti-aliased transparent fringe at the clip
+    // boundary so adjacent pieces meet with image content, not a dark gap.
+    ctx.globalAlpha = 0.5;
+    ctx.drawImage(this.image, sx, sy, sw, sh, dx + 1, dy, sw, sh);
+    ctx.drawImage(this.image, sx, sy, sw, sh, dx - 1, dy, sw, sh);
+    ctx.drawImage(this.image, sx, sy, sw, sh, dx, dy + 1, sw, sh);
+    ctx.drawImage(this.image, sx, sy, sw, sh, dx, dy - 1, sw, sh);
+    ctx.globalAlpha = 1;
+
     ctx.restore();
 
     // Draw piece outline + subtle shadow on a second pass
@@ -531,12 +543,13 @@ class JigsawPuzzle extends Emitter {
     ctx.translate(ox, oy);
 
     // Subtle inner highlight on the top/left edges
-    ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)';
     ctx.lineWidth = 1;
     ctx.stroke(path);
 
-    // Subtle dark outline
-    ctx.strokeStyle = 'rgba(0,0,0,0.25)';
+    // Very subtle dark outline (kept faint so seams between connected pieces
+    // don't darken; loose pieces still read as distinct)
+    ctx.strokeStyle = 'rgba(0,0,0,0.10)';
     ctx.lineWidth = 1;
     ctx.stroke(path);
 
@@ -844,6 +857,10 @@ class JigsawPuzzle extends Emitter {
     ctx.scale(scale, scale);
 
     for (const group of sortedGroups) {
+      // A group is "loose" if it has only one piece — those get drop shadows.
+      // Connected groups (2+ pieces) render flat with no shadow, so seams stay flush.
+      const isLoose = group.pieces.length === 1;
+
       for (const piece of group.pieces) {
         // Cull off-screen pieces
         if (
@@ -855,8 +872,9 @@ class JigsawPuzzle extends Emitter {
           continue;
         }
 
-        // Draw drop shadow (except when completed)
-        if (!this.completed || this.completionAnim < 1) {
+        // Drop shadow ONLY for loose (unconnected) pieces.
+        // Connected pieces sit flush — a shadow would bleed into the seam.
+        if (isLoose && (!this.completed || this.completionAnim < 1)) {
           ctx.save();
           ctx.shadowColor = 'rgba(0,0,0,0.4)';
           ctx.shadowBlur = 6;
