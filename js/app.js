@@ -139,11 +139,11 @@
 
     const metaParts = [];
     if (puzzle.category)
-      metaParts.push('<span>📂 ' + escapeHtml(puzzle.category) + "</span>");
-    if (puzzle.year)
-      metaParts.push('<span>📅 ' + escapeHtml(String(puzzle.year)) + "</span>");
+      metaParts.push('<span class="meta-item">📂 ' + escapeHtml(puzzle.category) + "</span>");
+    if (puzzle.year || puzzle.date)
+      metaParts.push('<span class="meta-item">📅 ' + escapeHtml(String(puzzle.year || puzzle.date)) + "</span>");
     if (puzzle.museum)
-      metaParts.push('<span>🏛️ ' + escapeHtml(puzzle.museum) + "</span>");
+      metaParts.push('<span class="meta-item">🏛️ ' + escapeHtml(puzzle.museum) + "</span>");
     metaEl.innerHTML = metaParts.join("");
 
     const puzzleId = puzzle.id || "";
@@ -169,23 +169,28 @@
     grid.innerHTML = categories
       .map(function (cat) {
         const countText =
-          cat.count > 0 ? cat.count + " puzzles" : "Coming soon";
+          cat.count > 0 ? cat.count + (cat.count === 1 ? " puzzle" : " puzzles") : "Coming soon";
         return (
           '<a href="gallery.html?category=' +
           encodeURIComponent(cat.name) +
           '" class="category-card">' +
+          '<div class="category-card-thumb-wrap">' +
           '<img class="category-card-thumb" src="' +
           escapeAttr(cat.thumbnail || PLACEHOLDER_IMG) +
           '" alt="' +
           escapeAttr(cat.name) +
           '" loading="lazy">' +
+          '<span class="category-card-count-pill">' +
+          countText +
+          "</span>" +
+          "</div>" +
           '<div class="category-card-body">' +
           '<h3 class="category-card-name">' +
           escapeHtml(cat.name) +
           "</h3>" +
-          '<span class="category-card-count">' +
-          countText +
-          "</span>" +
+          '<p class="category-card-desc">' +
+          escapeHtml(cat.desc || "") +
+          "</p>" +
           "</div>" +
           "</a>"
         );
@@ -194,6 +199,16 @@
   }
 
   // --- Derive categories from puzzle data ---
+  const CATEGORY_DESCRIPTIONS = {
+    "Japanese Ukiyo-e": "Woodblock prints and paintings from Japan's floating world",
+    "Japanese Screen Paintings": "Byōbu and fusuma — ink and color on gold and silk",
+    "Chinese Landscapes": "Shan shui — mountains and water in ink, across the dynasties",
+    "Korean Joseon Dynasty": "Paintings from Korea's five-hundred-year kingdom",
+    "Western Old Masters": "European painting from the Renaissance to the Baroque",
+    "Impressionism": "Light, color, and the modern world — Monet to Van Gogh",
+    "Islamic Art": "Calligraphy, geometry, and the illuminated manuscript",
+  };
+
   function deriveCategories(puzzles) {
     const catMap = {};
     puzzles.forEach(function (p) {
@@ -203,6 +218,7 @@
           name: p.category,
           thumbnail: p.image || p.thumbnail || PLACEHOLDER_IMG,
           count: 0,
+          desc: CATEGORY_DESCRIPTIONS[p.category] || "",
         };
       }
       catMap[p.category].count++;

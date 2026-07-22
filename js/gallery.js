@@ -113,9 +113,16 @@
     const id = puzzle.id || "";
     const title = puzzle.title || "Untitled";
     const artist = puzzle.artist || "Unknown artist";
-    const image = puzzle.image || puzzle.thumbnail || PLACEHOLDER_IMG;
+    // Use the lightweight thumbnail for grid cards (large image loads on the puzzle page)
+    const image = puzzle.thumbnail || puzzle.image || PLACEHOLDER_IMG;
     const category = puzzle.category || "";
-    const pieces = puzzle.pieces || puzzle.pieceCount || "";
+    // Default badge shows the "medium" difficulty tier
+    let pieces = "";
+    if (puzzle.difficulty && typeof puzzle.difficulty === "object") {
+      pieces = puzzle.difficulty.medium || puzzle.difficulty.easy || "";
+    } else if (puzzle.pieces || puzzle.pieceCount) {
+      pieces = puzzle.pieces || puzzle.pieceCount;
+    }
     const difficultyBadge = getDifficultyBadge(pieces);
 
     return (
