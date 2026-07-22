@@ -1,6 +1,6 @@
 {
-  "total": 45,
-  "downloaded": [
+  "total": 75,
+  "candidates": [
     {
       "category_id": "japanese-ukiyoe",
       "source": "met",
@@ -18,10 +18,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/44634",
-      "accession": "1991.151",
-      "local_path": "src/assets/images/japanese-ukiyoe/drunken-asaina.jpg",
-      "download_filename": "drunken-asaina.jpg",
-      "download_status": "ok"
+      "accession": "1991.151"
     },
     {
       "category_id": "japanese-ukiyoe",
@@ -40,10 +37,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53439",
-      "accession": "2015.300.110",
-      "local_path": "src/assets/images/japanese-ukiyoe/women-on-a-bridge-tossing-fans-into-a-river.jpg",
-      "download_filename": "women-on-a-bridge-tossing-fans-into-a-river.jpg",
-      "download_status": "ok"
+      "accession": "2015.300.110"
     },
     {
       "category_id": "japanese-ukiyoe",
@@ -62,10 +56,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/36742",
-      "accession": "JP270",
-      "local_path": "src/assets/images/japanese-ukiyoe/wild-geese-flying-under-the-full-moon.jpg",
-      "download_filename": "wild-geese-flying-under-the-full-moon.jpg",
-      "download_status": "ok"
+      "accession": "JP270"
     },
     {
       "category_id": "japanese-screens",
@@ -84,10 +75,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/44858",
-      "accession": "1975.268.48a–d",
-      "local_path": "src/assets/images/japanese-screens/old-plum.jpg",
-      "download_filename": "old-plum.jpg",
-      "download_status": "ok"
+      "accession": "1975.268.48a–d"
     },
     {
       "category_id": "japanese-screens",
@@ -106,10 +94,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/45258",
-      "accession": "1975.268.44, .45",
-      "local_path": "src/assets/images/japanese-screens/bamboo-in-the-four-seasons.jpg",
-      "download_filename": "bamboo-in-the-four-seasons.jpg",
-      "download_status": "ok"
+      "accession": "1975.268.44, .45"
     },
     {
       "category_id": "japanese-screens",
@@ -128,10 +113,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53221",
-      "accession": "2015.300.64a, b",
-      "local_path": "src/assets/images/japanese-screens/birds-and-flowers-of-summer-and-autumn.jpg",
-      "download_filename": "birds-and-flowers-of-summer-and-autumn.jpg",
-      "download_status": "ok"
+      "accession": "2015.300.64a, b"
     },
     {
       "category_id": "japanese-screens",
@@ -150,10 +132,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/44696",
-      "accession": "1992.8.1, .2",
-      "local_path": "src/assets/images/japanese-screens/gibbons-in-a-landscape.jpg",
-      "download_filename": "gibbons-in-a-landscape.jpg",
-      "download_status": "ok"
+      "accession": "1992.8.1, .2"
     },
     {
       "category_id": "japanese-screens",
@@ -172,10 +151,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53231",
-      "accession": "2015.300.50",
-      "local_path": "src/assets/images/japanese-screens/seven-sages-of-the-bamboo-grove.jpg",
-      "download_filename": "seven-sages-of-the-bamboo-grove.jpg",
-      "download_status": "ok"
+      "accession": "2015.300.50"
     },
     {
       "category_id": "western-old-masters",
@@ -194,10 +170,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436543",
-      "accession": "55.145.2",
-      "local_path": "src/assets/images/western-old-masters/josefa-de-castilla-portugal-y-van-asbrock-de-garcini-1775-ab.jpg",
-      "download_filename": "josefa-de-castilla-portugal-y-van-asbrock-de-garcini-1775-ab.jpg",
-      "download_status": "ok"
+      "accession": "55.145.2"
     },
     {
       "category_id": "western-old-masters",
@@ -216,10 +189,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436580",
-      "accession": "1970.295",
-      "local_path": "src/assets/images/western-old-masters/aegina-visited-by-jupiter.jpg",
-      "download_filename": "aegina-visited-by-jupiter.jpg",
-      "download_status": "ok"
+      "accession": "1970.295"
     },
     {
       "category_id": "western-old-masters",
@@ -238,10 +208,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437422",
-      "accession": "1974.348",
-      "local_path": "src/assets/images/western-old-masters/charity.jpg",
-      "download_filename": "charity.jpg",
-      "download_status": "ok"
+      "accession": "1974.348"
     },
     {
       "category_id": "western-old-masters",
@@ -260,10 +227,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435744",
-      "accession": "66.167",
-      "local_path": "src/assets/images/western-old-masters/virgin-and-child-with-the-young-saint-john-the-baptist-and-a.jpg",
-      "download_filename": "virgin-and-child-with-the-young-saint-john-the-baptist-and-a.jpg",
-      "download_status": "ok"
+      "accession": "66.167"
     },
     {
       "category_id": "western-old-masters",
@@ -282,10 +246,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436542",
-      "accession": "55.145.1",
-      "local_path": "src/assets/images/western-old-masters/ignacio-garcini-y-queralt-1752-1825-brigadier-of-engineers.jpg",
-      "download_filename": "ignacio-garcini-y-queralt-1752-1825-brigadier-of-engineers.jpg",
-      "download_status": "ok"
+      "accession": "55.145.1"
     },
     {
       "category_id": "western-old-masters",
@@ -304,10 +265,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435817",
-      "accession": "56.228",
-      "local_path": "src/assets/images/western-old-masters/the-crucifixion-with-the-virgin-and-saint-john.jpg",
-      "download_filename": "the-crucifixion-with-the-virgin-and-saint-john.jpg",
-      "download_status": "ok"
+      "accession": "56.228"
     },
     {
       "category_id": "western-old-masters",
@@ -326,10 +284,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435711",
-      "accession": "87.15.97",
-      "local_path": "src/assets/images/western-old-masters/an-egyptian-peasant-woman-and-her-child.jpg",
-      "download_filename": "an-egyptian-peasant-woman-and-her-child.jpg",
-      "download_status": "ok"
+      "accession": "87.15.97"
     },
     {
       "category_id": "western-old-masters",
@@ -348,10 +303,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437340",
-      "accession": "1994.190",
-      "local_path": "src/assets/images/western-old-masters/charles-maurice-de-talleyrand-perigord-1754-1838-prince-de-t.jpg",
-      "download_filename": "charles-maurice-de-talleyrand-perigord-1754-1838-prince-de-t.jpg",
-      "download_status": "ok"
+      "accession": "1994.190"
     },
     {
       "category_id": "western-old-masters",
@@ -370,10 +322,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436572",
-      "accession": "1978.416",
-      "local_path": "src/assets/images/western-old-masters/christ-healing-the-blind.jpg",
-      "download_filename": "christ-healing-the-blind.jpg",
-      "download_status": "ok"
+      "accession": "1978.416"
     },
     {
       "category_id": "western-old-masters",
@@ -392,10 +341,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435728",
-      "accession": "14.40.642",
-      "local_path": "src/assets/images/western-old-masters/the-last-communion-of-saint-jerome.jpg",
-      "download_filename": "the-last-communion-of-saint-jerome.jpg",
-      "download_status": "ok"
+      "accession": "14.40.642"
     },
     {
       "category_id": "western-old-masters",
@@ -414,10 +360,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436581",
-      "accession": "66.28.1",
-      "local_path": "src/assets/images/western-old-masters/charles-claude-de-flahaut-1730-1809-comte-d-angiviller.jpg",
-      "download_filename": "charles-claude-de-flahaut-1730-1809-comte-d-angiviller.jpg",
-      "download_status": "ok"
+      "accession": "66.28.1"
     },
     {
       "category_id": "western-old-masters",
@@ -436,10 +379,539 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437497",
-      "accession": "1989.86",
-      "local_path": "src/assets/images/western-old-masters/the-flagellation-reverse-the-madonna-of-mercy.jpg",
-      "download_filename": "the-flagellation-reverse-the-madonna-of-mercy.jpg",
-      "download_status": "ok"
+      "accession": "1989.86"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436244",
+      "title": "Virgin and Child with Saint Anne",
+      "artist": "Albrecht Dürer",
+      "date": "probably 1519",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP280846.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP280846.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436244",
+      "accession": "14.40.633"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437175",
+      "title": "Virgin and Child",
+      "artist": "Bartolomé Estebán Murillo",
+      "date": "1670s",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-010.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-010.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437175",
+      "accession": "43.13"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "435851",
+      "title": "The Meditation on the Passion",
+      "artist": "Vittore Carpaccio",
+      "date": "ca. 1490",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP296427.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP296427.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435851",
+      "accession": "11.118"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436106",
+      "title": "Antoine Laurent Lavoisier (1743–1794) and Marie Anne Lavoisier (Marie Anne Pierrette Paulze, 1758–1836)",
+      "artist": "Jacques Louis David",
+      "date": "1788",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-19709-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-19709-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436106",
+      "accession": "1977.10"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436101",
+      "title": "The Rest on the Flight into Egypt",
+      "artist": "Gerard David",
+      "date": "ca. 1512–15",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-023.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-023.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436101",
+      "accession": "49.7.21"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437868",
+      "title": "Don Gaspar de Guzmán (1587–1645), Count-Duke of Olivares",
+      "artist": "Juan Bautista Martínez del Mazo",
+      "date": "ca. 1636 or later",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14936-011.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14936-011.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437868",
+      "accession": "52.125"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437423",
+      "title": "The Immaculate Conception",
+      "artist": "Guido Reni",
+      "date": "1627",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DT1138.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DT1138.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437423",
+      "accession": "59.32"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436658",
+      "title": "Hermann von Wedigh III (died 1560)",
+      "artist": "Hans Holbein the Younger",
+      "date": "1532",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP164836.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP164836.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436658",
+      "accession": "50.135.4"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437398",
+      "title": "Flora",
+      "artist": "Rembrandt (Rembrandt van Rijn)",
+      "date": "ca. 1654",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP120785.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP120785.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437398",
+      "accession": "26.101.10"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437056",
+      "title": "Tommaso di Folco Portinari (1428–1501); Maria Portinari (Maria Maddalena Baroncelli, born 1456)",
+      "artist": "Hans Memling",
+      "date": "ca. 1470",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-44362-005.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-44362-005.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437056",
+      "accession": "14.40.626–27"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437654",
+      "title": "Circus Sideshow (Parade de cirque)",
+      "artist": "Georges Seurat",
+      "date": "1887–88",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP375450_cropped.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP375450_cropped.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437654",
+      "accession": "61.101.17"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436516",
+      "title": "The Triumph of Fame; (reverse) Impresa of the Medici Family and Arms of the Medici and Tornabuoni Families",
+      "artist": "Giovanni di ser Giovanni Guidi (called Scheggia)",
+      "date": "ca. 1449",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP164870.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP164870.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436516",
+      "accession": "1995.7"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436851",
+      "title": "Elizabeth Farren (born about 1759, died 1829), Later Countess of Derby",
+      "artist": "Sir Thomas Lawrence",
+      "date": "1790",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP169218.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP169218.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436851",
+      "accession": "50.135.5"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436838",
+      "title": "The Fortune-Teller",
+      "artist": "Georges de La Tour",
+      "date": "probably 1630s",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14286-015.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14286-015.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436838",
+      "accession": "60.30"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437394",
+      "title": "Aristotle with a Bust of Homer",
+      "artist": "Rembrandt (Rembrandt van Rijn)",
+      "date": "1653",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-30758-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-30758-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437394",
+      "accession": "61.198"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "459062",
+      "title": "Archangel Gabriel; The Virgin Annunciate",
+      "artist": "Gerard David",
+      "date": "ca. 1510",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "Robert Lehman Collection",
+      "image_url": "https://images.metmuseum.org/CRDImages/rl/original/DT3083.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/rl/web-large/DT3083.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/459062",
+      "accession": "1975.1.120A-B"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437879",
+      "title": "Study of a Young Woman",
+      "artist": "Johannes Vermeer",
+      "date": "ca. 1665–67",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP353256.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP353256.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437879",
+      "accession": "1979.396.1"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "435762",
+      "title": "Virgin and Child",
+      "artist": "Dieric Bouts",
+      "date": "ca. 1455–60",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-20589-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-20589-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435762",
+      "accession": "30.95.280"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "438816",
+      "title": "The Forest in Winter at Sunset",
+      "artist": "Théodore Rousseau",
+      "date": "ca. 1846–67",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-31520-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-31520-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/438816",
+      "accession": "11.4"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "435809",
+      "title": "The Harvesters",
+      "artist": "Pieter Bruegel the Elder",
+      "date": "1565",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP119115.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP119115.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435809",
+      "accession": "19.164"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "435807",
+      "title": "The Smokers",
+      "artist": "Adriaen Brouwer",
+      "date": "ca. 1636",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-15904-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-15904-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435807",
+      "accession": "32.100.21"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "435621",
+      "title": "Joan of Arc",
+      "artist": "Jules Bastien-Lepage",
+      "date": "1879",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14201-049.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-049.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435621",
+      "accession": "89.21.1"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437878",
+      "title": "A Maid Asleep",
+      "artist": "Johannes Vermeer",
+      "date": "ca. 1656–57",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP355525.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP355525.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437878",
+      "accession": "14.40.611"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436141",
+      "title": "The Dancing Class",
+      "artist": "Edgar Degas",
+      "date": "ca. 1870",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-25445-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-25445-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436141",
+      "accession": "29.100.184"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "437869",
+      "title": "Juan de Pareja (ca. 1608–1670)",
+      "artist": "Velázquez (Diego Rodríguez de Silva y Velázquez)",
+      "date": "1650",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-14286-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-14286-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437869",
+      "accession": "1971.86"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436282",
+      "title": "The Crucifixion; The Last Judgment",
+      "artist": "Jan van Eyck",
+      "date": "ca. 1436–38",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/LC-33_92ab-Primary_Temp.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/LC-33_92ab-Primary_Temp.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436282",
+      "accession": "33.92ab"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "438815",
+      "title": "Madame Georges Charpentier (Marguerite-Louise Lemonnier, 1848–1904) and Her Children, Georgette-Berthe (1872–1945) and Paul-Emile-Charles (1875–1895)",
+      "artist": "Auguste Renoir",
+      "date": "1878",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-35674-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-35674-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/438815",
+      "accession": "07.122"
+    },
+    {
+      "category_id": "western-old-masters",
+      "source": "met",
+      "object_id": "436803",
+      "title": "The Adoration of the Magi",
+      "artist": "Joos van Wassenhove",
+      "date": "1472–74",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-16339-001.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP-16339-001.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436803",
+      "accession": "41.190.21"
     },
     {
       "category_id": "impressionism",
@@ -458,10 +930,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436965",
-      "accession": "1976.201.14",
-      "local_path": "src/assets/images/impressionism/the-monet-family-in-their-garden-at-argenteuil.jpg",
-      "download_filename": "the-monet-family-in-their-garden-at-argenteuil.jpg",
-      "download_status": "ok"
+      "accession": "1976.201.14"
     },
     {
       "category_id": "impressionism",
@@ -480,10 +949,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/671456",
-      "accession": "2014.736",
-      "local_path": "src/assets/images/impressionism/chrysanthemums-in-the-garden-at-petit-gennevilliers.jpg",
-      "download_filename": "chrysanthemums-in-the-garden-at-petit-gennevilliers.jpg",
-      "download_status": "ok"
+      "accession": "2014.736"
     },
     {
       "category_id": "impressionism",
@@ -502,10 +968,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435882",
-      "accession": "51.112.1",
-      "local_path": "src/assets/images/impressionism/still-life-with-apples-and-a-pot-of-primroses.jpg",
-      "download_filename": "still-life-with-apples-and-a-pot-of-primroses.jpg",
-      "download_status": "ok"
+      "accession": "51.112.1"
     },
     {
       "category_id": "impressionism",
@@ -524,10 +987,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436947",
-      "accession": "29.100.115",
-      "local_path": "src/assets/images/impressionism/boating.jpg",
-      "download_filename": "boating.jpg",
-      "download_status": "ok"
+      "accession": "29.100.115"
     },
     {
       "category_id": "impressionism",
@@ -546,10 +1006,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436535",
-      "accession": "1993.132",
-      "local_path": "src/assets/images/impressionism/wheat-field-with-cypresses.jpg",
-      "download_filename": "wheat-field-with-cypresses.jpg",
-      "download_status": "ok"
+      "accession": "1993.132"
     },
     {
       "category_id": "impressionism",
@@ -568,10 +1025,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436533",
-      "accession": "1992.374",
-      "local_path": "src/assets/images/impressionism/shoes.jpg",
-      "download_filename": "shoes.jpg",
-      "download_status": "ok"
+      "accession": "1992.374"
     },
     {
       "category_id": "impressionism",
@@ -590,10 +1044,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436529",
-      "accession": "51.112.3",
-      "local_path": "src/assets/images/impressionism/l-arlesienne-madame-joseph-michel-ginoux-marie-julien-1848-1.jpg",
-      "download_filename": "l-arlesienne-madame-joseph-michel-ginoux-marie-julien-1848-1.jpg",
-      "download_status": "ok"
+      "accession": "51.112.3"
     },
     {
       "category_id": "impressionism",
@@ -612,10 +1063,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437984",
-      "accession": "1996.435",
-      "local_path": "src/assets/images/impressionism/la-berceuse-woman-rocking-a-cradle-augustine-alix-pellicot-r.jpg",
-      "download_filename": "la-berceuse-woman-rocking-a-cradle-augustine-alix-pellicot-r.jpg",
-      "download_status": "ok"
+      "accession": "1996.435"
     },
     {
       "category_id": "impressionism",
@@ -634,10 +1082,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436528",
-      "accession": "58.187",
-      "local_path": "src/assets/images/impressionism/irises.jpg",
-      "download_filename": "irises.jpg",
-      "download_status": "ok"
+      "accession": "58.187"
     },
     {
       "category_id": "impressionism",
@@ -656,10 +1101,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436536",
-      "accession": "1995.535",
-      "local_path": "src/assets/images/impressionism/women-picking-olives.jpg",
-      "download_filename": "women-picking-olives.jpg",
-      "download_status": "ok"
+      "accession": "1995.535"
     },
     {
       "category_id": "impressionism",
@@ -678,10 +1120,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436526",
-      "accession": "64.165.2",
-      "local_path": "src/assets/images/impressionism/first-steps-after-millet.jpg",
-      "download_filename": "first-steps-after-millet.jpg",
-      "download_status": "ok"
+      "accession": "64.165.2"
     },
     {
       "category_id": "impressionism",
@@ -700,10 +1139,45 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436530",
-      "accession": "62.24",
-      "local_path": "src/assets/images/impressionism/oleanders.jpg",
-      "download_filename": "oleanders.jpg",
-      "download_status": "ok"
+      "accession": "62.24"
+    },
+    {
+      "category_id": "impressionism",
+      "source": "met",
+      "object_id": "437980",
+      "title": "Cypresses",
+      "artist": "Vincent van Gogh",
+      "date": "1889",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP130999.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP130999.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980",
+      "accession": "49.30"
+    },
+    {
+      "category_id": "impressionism",
+      "source": "met",
+      "object_id": "436534",
+      "title": "Roses",
+      "artist": "Vincent van Gogh",
+      "date": "1890",
+      "culture": "",
+      "dynasty": "",
+      "period": "",
+      "classification": "Paintings",
+      "department": "European Paintings",
+      "image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP346475.jpg",
+      "image_url_small": "https://images.metmuseum.org/CRDImages/ep/web-large/DP346475.jpg",
+      "museum": "Metropolitan Museum of Art",
+      "license": "Public Domain (Met Open Access)",
+      "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436534",
+      "accession": "1993.400.5"
     },
     {
       "category_id": "islamic-art",
@@ -722,10 +1196,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449211",
-      "accession": "37.103",
-      "local_path": "src/assets/images/islamic-art/panel.jpg",
-      "download_filename": "panel.jpg",
-      "download_status": "ok"
+      "accession": "37.103"
     },
     {
       "category_id": "islamic-art",
@@ -744,10 +1215,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453279",
-      "accession": "1987.14",
-      "local_path": "src/assets/images/islamic-art/calligraphic-plaque.jpg",
-      "download_filename": "calligraphic-plaque.jpg",
-      "download_status": "ok"
+      "accession": "1987.14"
     },
     {
       "category_id": "islamic-art",
@@ -766,10 +1234,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/444812",
-      "accession": "91.1.2064",
-      "local_path": "src/assets/images/islamic-art/pair-of-minbar-doors.jpg",
-      "download_filename": "pair-of-minbar-doors.jpg",
-      "download_status": "ok"
+      "accession": "91.1.2064"
     },
     {
       "category_id": "islamic-art",
@@ -788,10 +1253,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449311",
-      "accession": "38.40.98",
-      "local_path": "src/assets/images/islamic-art/seal-stone.jpg",
-      "download_filename": "seal-stone.jpg",
-      "download_status": "ok"
+      "accession": "38.40.98"
     },
     {
       "category_id": "islamic-art",
@@ -810,10 +1272,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453250",
-      "accession": "1985.2",
-      "local_path": "src/assets/images/islamic-art/study-of-a-bird.jpg",
-      "download_filename": "study-of-a-bird.jpg",
-      "download_status": "ok"
+      "accession": "1985.2"
     },
     {
       "category_id": "islamic-art",
@@ -832,10 +1291,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453336",
-      "accession": "1992.51",
-      "local_path": "src/assets/images/islamic-art/a-stallion.jpg",
-      "download_filename": "a-stallion.jpg",
-      "download_status": "ok"
+      "accession": "1992.51"
     },
     {
       "category_id": "islamic-art",
@@ -854,10 +1310,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449312",
-      "accession": "38.40.100",
-      "local_path": "src/assets/images/islamic-art/seal-stone.jpg",
-      "download_filename": "seal-stone.jpg",
-      "download_status": "ok"
+      "accession": "38.40.100"
     },
     {
       "category_id": "islamic-art",
@@ -876,10 +1329,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/454608",
-      "accession": "2003.239",
-      "local_path": "src/assets/images/islamic-art/book-of-prayers-surat-al-yasin-and-surat-al-fath.jpg",
-      "download_filename": "book-of-prayers-surat-al-yasin-and-surat-al-fath.jpg",
-      "download_status": "ok"
+      "accession": "2003.239"
     },
     {
       "category_id": "islamic-art",
@@ -898,10 +1348,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/451403",
-      "accession": "57.51.24",
-      "local_path": "src/assets/images/islamic-art/wine-drinking-in-a-spring-garden.jpg",
-      "download_filename": "wine-drinking-in-a-spring-garden.jpg",
-      "download_status": "ok"
+      "accession": "57.51.24"
     },
     {
       "category_id": "islamic-art",
@@ -920,10 +1367,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449671",
-      "accession": "39.40.141",
-      "local_path": "src/assets/images/islamic-art/inscribed-seal.jpg",
-      "download_filename": "inscribed-seal.jpg",
-      "download_status": "ok"
+      "accession": "39.40.141"
     },
     {
       "category_id": "islamic-art",
@@ -942,10 +1386,7 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/456342",
-      "accession": "2008.251",
-      "local_path": "src/assets/images/islamic-art/futuh-al-haramayn-description-of-the-holy-cities.jpg",
-      "download_filename": "futuh-al-haramayn-description-of-the-holy-cities.jpg",
-      "download_status": "ok"
+      "accession": "2008.251"
     },
     {
       "category_id": "islamic-art",
@@ -964,17 +1405,14 @@
       "museum": "Metropolitan Museum of Art",
       "license": "Public Domain (Met Open Access)",
       "source_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453673",
-      "accession": "1999.157",
-      "local_path": "src/assets/images/islamic-art/nan-va-halva-breads-and-sweets.jpg",
-      "download_filename": "nan-va-halva-breads-and-sweets.jpg",
-      "download_status": "ok"
+      "accession": "1999.157"
     },
     {
       "category_id": "chinese-landscape",
       "source": "cleveland",
       "object_id": "113945",
       "title": "Cloudy Mountains",
-      "artist": "male",
+      "artist": "Unknown",
       "date": "1130",
       "culture": "China, Southern Song dynasty (1127-1279)",
       "dynasty": "",
@@ -986,10 +1424,7 @@
       "museum": "Cleveland Museum of Art",
       "license": "CC0 (Creative Commons Zero)",
       "source_url": "https://openaccess-api.clevelandart.org/api/artworks/113945",
-      "accession": "1933.220",
-      "local_path": "src/assets/images/chinese-landscape/cloudy-mountains.jpg",
-      "download_filename": "cloudy-mountains.jpg",
-      "download_status": "ok"
+      "accession": "1933.220"
     }
   ]
 }

@@ -36,8 +36,8 @@ MEDIUM_MAX = 800
 THUMB_MAX = 300
 JPEG_QUALITY = 85
 JPEG_QUALITY_THUMB = 80
-MIN_ORIG_PX = 800  # skip if smaller than this on shortest side
-MAX_RATIO = 3.0    # skip if aspect ratio > 3:1 or < 1:3
+MIN_ORIG_PX = 500  # skip if smaller than this on shortest side (allows handscrolls)
+MAX_RATIO = 6.0    # skip if aspect ratio > 6:1 or < 1:6 (Chinese handscrolls are panoramic)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 log = logging.getLogger("process")

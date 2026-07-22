@@ -1,194 +1,14 @@
 {
   "version": "1.0",
-  "generated": "2026-07-21T02:57:32.405107+00:00",
-  "total_puzzles": 69,
+  "generated": "2026-07-22T01:57:24.627091+00:00",
+  "total_puzzles": 44,
   "categories": [
     {
       "id": "japanese-ukiyoe",
       "name": "Japanese Ukiyo-e",
       "description": "Woodblock prints from Japan's floating world",
-      "puzzle_count": 12,
+      "puzzle_count": 3,
       "puzzles": [
-        {
-          "id": "met-437756",
-          "title": "The Japanese Robe",
-          "artist": "Alfred Stevens",
-          "date": "ca. 1872",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/the-japanese-robe-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/the-japanese-robe-thumb.jpg",
-          "width": 839,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437756",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-436102",
-          "title": "Virgin and Child with Four Angels",
-          "artist": "Gerard David",
-          "date": "ca. 1510–15",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/virgin-and-child-with-four-angels-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/virgin-and-child-with-four-angels-thumb.jpg",
-          "width": 747,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436102",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "met-438821",
-          "title": "Ia Orana Maria (Hail Mary)",
-          "artist": "Paul Gauguin",
-          "date": "1891",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/ia-orana-maria-hail-mary-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/ia-orana-maria-hail-mary-thumb.jpg",
-          "width": 944,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/438821",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-436098",
-          "title": "The Crucifixion",
-          "artist": "Gerard David",
-          "date": "ca. 1495",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/the-crucifixion-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/the-crucifixion-thumb.jpg",
-          "width": 915,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436098",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-435897",
-          "title": "Head of Christ (Ecce Homo)",
-          "artist": "Petrus Christus",
-          "date": "ca. 1445",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/head-of-christ-ecce-homo-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/head-of-christ-ecce-homo-thumb.jpg",
-          "width": 884,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435897",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-437173",
-          "title": "Don Andrés de Andrade y la Cal",
-          "artist": "Bartolomé Estebán Murillo",
-          "date": "ca. 1665–72",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/don-andres-de-andrade-y-la-cal-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/don-andres-de-andrade-y-la-cal-thumb.jpg",
-          "width": 737,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437173",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "met-439327",
-          "title": "Christ Blessing",
-          "artist": "Gerard David",
-          "date": "ca. 1500–1505",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/christ-blessing-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/christ-blessing-thumb.jpg",
-          "width": 866,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/439327",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-458967",
-          "title": "Saint Anthony the Abbot in the Wilderness",
-          "artist": "Sano di Pietro (Ansano di Pietro di Mencio)",
-          "date": "ca. 1440",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/saint-anthony-the-abbot-in-the-wilderness-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/saint-anthony-the-abbot-in-the-wilderness-thumb.jpg",
-          "width": 876,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/458967",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-437216",
-          "title": "The Fifteen Mysteries and the Virgin of the Rosary",
-          "artist": "Netherlandish (Brussels) Painter",
-          "date": "ca. 1515–20",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/the-fifteen-mysteries-and-the-virgin-of-the-rosary-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/the-fifteen-mysteries-and-the-virgin-of-the-rosary-thumb.jpg",
-          "width": 1036,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437216",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
         {
           "id": "met-44634",
           "title": "Drunken Asaina",
@@ -210,43 +30,43 @@
           }
         },
         {
-          "id": "met-437061",
-          "title": "Salvator Mundi",
-          "artist": "Hans Memling",
-          "date": "1480–85",
-          "culture": "",
+          "id": "met-36742",
+          "title": "Wild Geese Flying under the Full Moon",
+          "artist": "Utagawa Hiroshige",
+          "date": "ca. 1833",
+          "culture": "Japan",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/salvator-mundi-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/salvator-mundi-thumb.jpg",
-          "width": 1200,
-          "height": 1193,
+          "image": "assets/images/japanese-ukiyoe/wild-geese-flying-under-the-full-moon-large.jpg",
+          "thumbnail": "assets/images/japanese-ukiyoe/wild-geese-flying-under-the-full-moon-thumb.jpg",
+          "width": 416,
+          "height": 1200,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437061",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/36742",
           "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
+            "easy": 16,
+            "medium": 36,
+            "hard": 64,
+            "expert": 128
           }
         },
         {
-          "id": "met-39901",
-          "title": "Night-Shining White",
-          "artist": "Han Gan",
-          "date": "ca. 750",
-          "culture": "China",
+          "id": "met-53439",
+          "title": "Women on a Bridge Tossing Fans into a River",
+          "artist": "Unknown",
+          "date": "early 17th century",
+          "culture": "Japan",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-ukiyoe/night-shining-white-large.jpg",
-          "thumbnail": "assets/images/japanese-ukiyoe/night-shining-white-thumb.jpg",
+          "image": "assets/images/japanese-ukiyoe/women-on-a-bridge-tossing-fans-into-a-river-large.jpg",
+          "thumbnail": "assets/images/japanese-ukiyoe/women-on-a-bridge-tossing-fans-into-a-river-thumb.jpg",
           "width": 1200,
-          "height": 901,
+          "height": 560,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/39901",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53439",
           "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
           }
         }
       ]
@@ -255,26 +75,66 @@
       "id": "japanese-screens",
       "name": "Japanese Screen Paintings",
       "description": "Byobu and fusuma screen paintings from Japan",
-      "puzzle_count": 12,
+      "puzzle_count": 5,
       "puzzles": [
         {
-          "id": "met-24975",
-          "title": "Armor (<i>Gusoku</i>)",
-          "artist": "Bamen Tomotsugu",
-          "date": "18th century",
-          "culture": "Japanese, Toyohara, Echizen province",
+          "id": "met-45258",
+          "title": "Bamboo in the Four Seasons",
+          "artist": "Tosa Mitsunobu",
+          "date": "late 15th–early 16th century",
+          "culture": "Japan",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/armor-i-gusoku-i-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/armor-i-gusoku-i-thumb.jpg",
-          "width": 960,
+          "image": "assets/images/japanese-screens/bamboo-in-the-four-seasons-large.jpg",
+          "thumbnail": "assets/images/japanese-screens/bamboo-in-the-four-seasons-thumb.jpg",
+          "width": 1200,
+          "height": 566,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/45258",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
+          }
+        },
+        {
+          "id": "met-53221",
+          "title": "Birds and Flowers of Summer and Autumn",
+          "artist": "Shikibu Terutada",
+          "date": "mid-16th century",
+          "culture": "Japan",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/japanese-screens/birds-and-flowers-of-summer-and-autumn-large.jpg",
+          "thumbnail": "assets/images/japanese-screens/birds-and-flowers-of-summer-and-autumn-thumb.jpg",
+          "width": 900,
           "height": 1200,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/24975",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53221",
           "difficulty": {
             "easy": 24,
             "medium": 54,
             "hard": 96,
             "expert": 192
+          }
+        },
+        {
+          "id": "met-44696",
+          "title": "Gibbons in a Landscape",
+          "artist": "Sesson Shūkei 雪村周継",
+          "date": "ca. 1570",
+          "culture": "Japan",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/japanese-screens/gibbons-in-a-landscape-large.jpg",
+          "thumbnail": "assets/images/japanese-screens/gibbons-in-a-landscape-thumb.jpg",
+          "width": 1200,
+          "height": 577,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/44696",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
           }
         },
         {
@@ -298,203 +158,23 @@
           }
         },
         {
-          "id": "met-76084",
-          "title": "The Bodhisattva Jizō",
-          "artist": "Intan",
-          "date": "1291",
+          "id": "met-53231",
+          "title": "Seven Sages of the Bamboo Grove",
+          "artist": "Sesson Shūkei",
+          "date": "1550s",
           "culture": "Japan",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/the-bodhisattva-jizo-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/the-bodhisattva-jizo-thumb.jpg",
-          "width": 899,
+          "image": "assets/images/japanese-screens/seven-sages-of-the-bamboo-grove-large.jpg",
+          "thumbnail": "assets/images/japanese-screens/seven-sages-of-the-bamboo-grove-thumb.jpg",
+          "width": 900,
           "height": 1200,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/76084",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53231",
           "difficulty": {
             "easy": 24,
             "medium": 54,
             "hard": 96,
             "expert": 192
-          }
-        },
-        {
-          "id": "met-53190",
-          "title": "Guardian Lion-Dogs",
-          "artist": "Unknown",
-          "date": "mid-13th century",
-          "culture": "Japan",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/guardian-lion-dogs-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/guardian-lion-dogs-thumb.jpg",
-          "width": 1200,
-          "height": 899,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53190",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-50342",
-          "title": "Small Dish (Kozara) with Three Jars",
-          "artist": "Unknown",
-          "date": "1680–90s",
-          "culture": "Japan",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/small-dish-kozara-with-three-jars-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/small-dish-kozara-with-three-jars-thumb.jpg",
-          "width": 1200,
-          "height": 900,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/50342",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-53002",
-          "title": "Shino Tea Bowl with Bridge and Shrine, Known as “Bridge of the Gods” (Shinkyō)",
-          "artist": "Unknown",
-          "date": "late 16th–early 17th century",
-          "culture": "Japan",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/shino-tea-bowl-with-bridge-and-shrine-known-as-bridge-of-the-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/shino-tea-bowl-with-bridge-and-shrine-known-as-bridge-of-the-thumb.jpg",
-          "width": 1200,
-          "height": 675,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/53002",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "met-811180",
-          "title": "The ornamental arts of Japan",
-          "artist": "George Ashdown Audsley",
-          "date": "1883",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/the-ornamental-arts-of-japan-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/the-ornamental-arts-of-japan-thumb.jpg",
-          "width": 850,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/811180",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-35376",
-          "title": "Pair of Stirrups (<i>Abumi</i>)",
-          "artist": "Unknown",
-          "date": "late 16th–early 17th century",
-          "culture": "Japanese",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/pair-of-stirrups-i-abumi-i-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/pair-of-stirrups-i-abumi-i-thumb.jpg",
-          "width": 1200,
-          "height": 900,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/35376",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-22098",
-          "title": "Helmet in the Shape of a Crouching Rabbit",
-          "artist": "Unknown",
-          "date": "17th century",
-          "culture": "Japanese",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/helmet-in-the-shape-of-a-crouching-rabbit-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/helmet-in-the-shape-of-a-crouching-rabbit-thumb.jpg",
-          "width": 944,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/22098",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-23026",
-          "title": "Helmet",
-          "artist": "Unknown",
-          "date": "5th century",
-          "culture": "Japanese",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/helmet-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/helmet-thumb.jpg",
-          "width": 1200,
-          "height": 930,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/23026",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-24014",
-          "title": "Helmet (<i>Zukinnari Kabuto</i>)",
-          "artist": "Unknown",
-          "date": "16th century",
-          "culture": "Japanese",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/helmet-i-zukinnari-kabuto-i-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/helmet-i-zukinnari-kabuto-i-thumb.jpg",
-          "width": 906,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/24014",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-45258",
-          "title": "Bamboo in the Four Seasons",
-          "artist": "Tosa Mitsunobu",
-          "date": "late 15th–early 16th century",
-          "culture": "Japan",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/japanese-screens/bamboo-in-the-four-seasons-large.jpg",
-          "thumbnail": "assets/images/japanese-screens/bamboo-in-the-four-seasons-thumb.jpg",
-          "width": 1200,
-          "height": 566,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/45258",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
           }
         }
       ]
@@ -503,274 +183,26 @@
       "id": "chinese-landscape",
       "name": "Chinese Landscapes",
       "description": "Chinese landscape paintings and bird-and-flower works",
-      "puzzle_count": 12,
-      "puzzles": [
-        {
-          "id": "cleveland-149146",
-          "title": "Raft Cup",
-          "artist": "male",
-          "date": "1300s–1400s",
-          "culture": "China, Yuan (1271-1368) or early Ming dynasty (1368-1644)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/raft-cup-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/raft-cup-thumb.jpg",
-          "width": 1200,
-          "height": 1161,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/149146",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-137198",
-          "title": "Jar with Lion-Head Handles",
-          "artist": "Unknown",
-          "date": "1300s",
-          "culture": "China, Jiangxi Province, Jingdezhen, Yuan dynasty (1271–1368)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/jar-with-lion-head-handles-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/jar-with-lion-head-handles-thumb.jpg",
-          "width": 1200,
-          "height": 1147,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/137198",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-130130",
-          "title": "Cup with Daoist Figures",
-          "artist": "Unknown",
-          "date": "1736–95",
-          "culture": "China, Qing dynasty (1644–1911), Qianlong period (1736–95)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/cup-with-daoist-figures-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/cup-with-daoist-figures-thumb.jpg",
-          "width": 1200,
-          "height": 703,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/130130",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "cleveland-147084",
-          "title": "Virupa",
-          "artist": "Unknown",
-          "date": "early 1400s",
-          "culture": "China, Ming dynasty (1368-1644), Yongle reign (1403-1424)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/virupa-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/virupa-thumb.jpg",
-          "width": 957,
-          "height": 1200,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/147084",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-130939",
-          "title": "Amulet in the Form of a Seated Figure with Bovine Head",
-          "artist": "Unknown",
-          "date": "c. 4700–2920 BCE",
-          "culture": "Northeast China, Neolithic period, probably Hongshan culture (4700–2920 BCE)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/amulet-in-the-form-of-a-seated-figure-with-bovine-head-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/amulet-in-the-form-of-a-seated-figure-with-bovine-head-thumb.jpg",
-          "width": 812,
-          "height": 1200,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/130939",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "cleveland-161427",
-          "title": "Tomb Guardian with Animal Head",
-          "artist": "Unknown",
-          "date": "early 700s",
-          "culture": "China, probably Shaanxi province, Xi'an, Tang dynasty (618-907)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/tomb-guardian-with-animal-head-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/tomb-guardian-with-animal-head-thumb.jpg",
-          "width": 854,
-          "height": 1200,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/161427",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-93992",
-          "title": "Stele with Sakyamuni and Bodhisattvas",
-          "artist": "Unknown",
-          "date": "537",
-          "culture": "China, Hebei province, Eastern Wei dynasty (534-550)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/stele-with-sakyamuni-and-bodhisattvas-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/stele-with-sakyamuni-and-bodhisattvas-thumb.jpg",
-          "width": 853,
-          "height": 1200,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/93992",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-135007",
-          "title": "Wine Cup with Children at Play",
-          "artist": "Unknown",
-          "date": "1465–87",
-          "culture": "China, Jiangxi province, Jingdezhen, Ming dynasty (1368-1644), Chenghua mark and period (1465-1487)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/wine-cup-with-children-at-play-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/wine-cup-with-children-at-play-thumb.jpg",
-          "width": 1200,
-          "height": 1028,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/135007",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-117940",
-          "title": "Cranes and Serpents",
-          "artist": "Unknown",
-          "date": "475–221 BCE",
-          "culture": "China, reportedly from Hunan province, Changsha, Warring States period (475–221 BCE), State of Chu (c. 1046–223 BCE)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/cranes-and-serpents-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/cranes-and-serpents-thumb.jpg",
-          "width": 1027,
-          "height": 1200,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/117940",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-147576",
-          "title": "Mirror with Phoenixes, Birds, Butterflies, and Floral Sprays",
-          "artist": "Unknown",
-          "date": "700s",
-          "culture": "China, Tang dynasty (618-907)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/mirror-with-phoenixes-birds-butterflies-and-floral-sprays-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/mirror-with-phoenixes-birds-butterflies-and-floral-sprays-thumb.jpg",
-          "width": 1200,
-          "height": 1153,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/147576",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "cleveland-134843",
-          "title": "Brush Washer",
-          "artist": "Unknown",
-          "date": "late 1000s–1127",
-          "culture": "China, Henan Province, Baofeng, Qingliangsi, Northern Song dynasty (960-1127)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/brush-washer-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/brush-washer-thumb.jpg",
-          "width": 1200,
-          "height": 685,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/134843",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "cleveland-145937",
-          "title": "Vase with Golden Pheasants",
-          "artist": "Unknown",
-          "date": "1736–95",
-          "culture": "China, Jiangxi province, Jingdezhen kilns, Qing dynasty (1644-1911), Qianlong mark and period (1736-95)",
-          "museum": "Cleveland Museum of Art",
-          "image": "assets/images/chinese-landscape/vase-with-golden-pheasants-large.jpg",
-          "thumbnail": "assets/images/chinese-landscape/vase-with-golden-pheasants-thumb.jpg",
-          "width": 800,
-          "height": 1200,
-          "license": "CC0 (Creative Commons Zero)",
-          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/145937",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        }
-      ]
-    },
-    {
-      "id": "korean-joseon",
-      "name": "Korean Joseon Dynasty",
-      "description": "Paintings from Korea's Joseon dynasty",
       "puzzle_count": 1,
       "puzzles": [
         {
-          "id": "met-57573",
-          "title": "Statuette of Buddha Sitting on Engraved Throne",
+          "id": "cleveland-113945",
+          "title": "Cloudy Mountains",
           "artist": "Unknown",
-          "date": "10th century",
-          "culture": "Korea",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/korean-joseon/statuette-of-buddha-sitting-on-engraved-throne-large.jpg",
-          "thumbnail": "assets/images/korean-joseon/statuette-of-buddha-sitting-on-engraved-throne-thumb.jpg",
-          "width": 731,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/57573",
+          "date": "1130",
+          "culture": "China, Southern Song dynasty (1127-1279)",
+          "museum": "Cleveland Museum of Art",
+          "image": "assets/images/chinese-landscape/cloudy-mountains-large.jpg",
+          "thumbnail": "assets/images/chinese-landscape/cloudy-mountains-thumb.jpg",
+          "width": 1200,
+          "height": 214,
+          "license": "CC0 (Creative Commons Zero)",
+          "sourceUrl": "https://openaccess-api.clevelandart.org/api/artworks/113945",
           "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
+            "easy": 16,
+            "medium": 36,
+            "hard": 64,
+            "expert": 128
           }
         }
       ]
@@ -781,26 +213,6 @@
       "description": "European Old Master paintings (Rembrandt, Vermeer, Dutch Golden Age)",
       "puzzle_count": 12,
       "puzzles": [
-        {
-          "id": "met-436543",
-          "title": "Josefa de Castilla Portugal y van Asbrock de Garcini (1775–about 1850)",
-          "artist": "Goya (Francisco de Goya y Lucientes)",
-          "date": "1804",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/josefa-de-castilla-portugal-y-van-asbrock-de-garcini-1775-ab-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/josefa-de-castilla-portugal-y-van-asbrock-de-garcini-1775-ab-thumb.jpg",
-          "width": 970,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436543",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
         {
           "id": "met-436580",
           "title": "Aegina Visited by Jupiter",
@@ -819,6 +231,26 @@
             "medium": 54,
             "hard": 96,
             "expert": 192
+          }
+        },
+        {
+          "id": "met-435711",
+          "title": "An Egyptian Peasant Woman and Her Child",
+          "artist": "Léon Bonnat",
+          "date": "1869–70",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/western-old-masters/an-egyptian-peasant-woman-and-her-child-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/an-egyptian-peasant-woman-and-her-child-thumb.jpg",
+          "width": 653,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435711",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
           }
         },
         {
@@ -842,83 +274,23 @@
           }
         },
         {
-          "id": "met-435744",
-          "title": "Virgin and Child with the Young Saint John the Baptist and Angels",
-          "artist": "François Boucher",
-          "date": "1765",
+          "id": "met-436581",
+          "title": "Charles Claude de Flahaut (1730–1809), Comte d'Angiviller",
+          "artist": "Jean-Baptiste Greuze",
+          "date": "1763",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/virgin-and-child-with-the-young-saint-john-the-baptist-and-a-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/virgin-and-child-with-the-young-saint-john-the-baptist-and-a-thumb.jpg",
-          "width": 1011,
+          "image": "assets/images/western-old-masters/charles-claude-de-flahaut-1730-1809-comte-d-angiviller-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/charles-claude-de-flahaut-1730-1809-comte-d-angiviller-thumb.jpg",
+          "width": 1023,
           "height": 1200,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435744",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436581",
           "difficulty": {
             "easy": 24,
             "medium": 54,
             "hard": 96,
             "expert": 192
-          }
-        },
-        {
-          "id": "met-436542",
-          "title": "Ignacio Garcini y Queralt (1752–1825), Brigadier of Engineers",
-          "artist": "Goya (Francisco de Goya y Lucientes)",
-          "date": "1804",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/ignacio-garcini-y-queralt-1752-1825-brigadier-of-engineers-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/ignacio-garcini-y-queralt-1752-1825-brigadier-of-engineers-thumb.jpg",
-          "width": 970,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436542",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-435817",
-          "title": "The Crucifixion with the Virgin and Saint John",
-          "artist": "Hendrick ter Brugghen",
-          "date": "ca. 1624–25",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/the-crucifixion-with-the-virgin-and-saint-john-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/the-crucifixion-with-the-virgin-and-saint-john-thumb.jpg",
-          "width": 802,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435817",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "met-435711",
-          "title": "An Egyptian Peasant Woman and Her Child",
-          "artist": "Léon Bonnat",
-          "date": "1869–70",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/an-egyptian-peasant-woman-and-her-child-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/an-egyptian-peasant-woman-and-her-child-thumb.jpg",
-          "width": 653,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435711",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
           }
         },
         {
@@ -962,18 +334,18 @@
           }
         },
         {
-          "id": "met-435728",
-          "title": "The Last Communion of Saint Jerome",
-          "artist": "Botticelli (Alessandro di Mariano Filipepi)",
-          "date": "early 1490s",
+          "id": "met-436542",
+          "title": "Ignacio Garcini y Queralt (1752–1825), Brigadier of Engineers",
+          "artist": "Goya (Francisco de Goya y Lucientes)",
+          "date": "1804",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/the-last-communion-of-saint-jerome-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/the-last-communion-of-saint-jerome-thumb.jpg",
-          "width": 906,
+          "image": "assets/images/western-old-masters/ignacio-garcini-y-queralt-1752-1825-brigadier-of-engineers-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/ignacio-garcini-y-queralt-1752-1825-brigadier-of-engineers-thumb.jpg",
+          "width": 970,
           "height": 1200,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435728",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436542",
           "difficulty": {
             "easy": 24,
             "medium": 54,
@@ -982,23 +354,43 @@
           }
         },
         {
-          "id": "met-436581",
-          "title": "Charles Claude de Flahaut (1730–1809), Comte d'Angiviller",
-          "artist": "Jean-Baptiste Greuze",
-          "date": "1763",
+          "id": "met-436543",
+          "title": "Josefa de Castilla Portugal y van Asbrock de Garcini (1775–about 1850)",
+          "artist": "Goya (Francisco de Goya y Lucientes)",
+          "date": "1804",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/western-old-masters/charles-claude-de-flahaut-1730-1809-comte-d-angiviller-large.jpg",
-          "thumbnail": "assets/images/western-old-masters/charles-claude-de-flahaut-1730-1809-comte-d-angiviller-thumb.jpg",
-          "width": 1023,
+          "image": "assets/images/western-old-masters/josefa-de-castilla-portugal-y-van-asbrock-de-garcini-1775-ab-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/josefa-de-castilla-portugal-y-van-asbrock-de-garcini-1775-ab-thumb.jpg",
+          "width": 970,
           "height": 1200,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436581",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436543",
           "difficulty": {
             "easy": 24,
             "medium": 54,
             "hard": 96,
             "expert": 192
+          }
+        },
+        {
+          "id": "met-435817",
+          "title": "The Crucifixion with the Virgin and Saint John",
+          "artist": "Hendrick ter Brugghen",
+          "date": "ca. 1624–25",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/western-old-masters/the-crucifixion-with-the-virgin-and-saint-john-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/the-crucifixion-with-the-virgin-and-saint-john-thumb.jpg",
+          "width": 802,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435817",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
           }
         },
         {
@@ -1020,6 +412,46 @@
             "hard": 96,
             "expert": 192
           }
+        },
+        {
+          "id": "met-435728",
+          "title": "The Last Communion of Saint Jerome",
+          "artist": "Botticelli (Alessandro di Mariano Filipepi)",
+          "date": "early 1490s",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/western-old-masters/the-last-communion-of-saint-jerome-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/the-last-communion-of-saint-jerome-thumb.jpg",
+          "width": 906,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435728",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-435744",
+          "title": "Virgin and Child with the Young Saint John the Baptist and Angels",
+          "artist": "François Boucher",
+          "date": "1765",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/western-old-masters/virgin-and-child-with-the-young-saint-john-the-baptist-and-a-large.jpg",
+          "thumbnail": "assets/images/western-old-masters/virgin-and-child-with-the-young-saint-john-the-baptist-and-a-thumb.jpg",
+          "width": 1011,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/435744",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
         }
       ]
     },
@@ -1027,26 +459,26 @@
       "id": "impressionism",
       "name": "Impressionism",
       "description": "Impressionist and Post-Impressionist works (Monet, Van Gogh)",
-      "puzzle_count": 11,
+      "puzzle_count": 12,
       "puzzles": [
         {
-          "id": "met-436965",
-          "title": "The Monet Family in Their Garden at Argenteuil",
+          "id": "met-436947",
+          "title": "Boating",
           "artist": "Edouard Manet",
           "date": "1874",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/the-monet-family-in-their-garden-at-argenteuil-large.jpg",
-          "thumbnail": "assets/images/impressionism/the-monet-family-in-their-garden-at-argenteuil-thumb.jpg",
+          "image": "assets/images/impressionism/boating-large.jpg",
+          "thumbnail": "assets/images/impressionism/boating-thumb.jpg",
           "width": 1200,
-          "height": 755,
+          "height": 916,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436965",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436947",
           "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
           }
         },
         {
@@ -1070,6 +502,126 @@
           }
         },
         {
+          "id": "met-436526",
+          "title": "First Steps, after Millet",
+          "artist": "Vincent van Gogh",
+          "date": "1890",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/first-steps-after-millet-large.jpg",
+          "thumbnail": "assets/images/impressionism/first-steps-after-millet-thumb.jpg",
+          "width": 1200,
+          "height": 951,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436526",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-436528",
+          "title": "Irises",
+          "artist": "Vincent van Gogh",
+          "date": "1890",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/irises-large.jpg",
+          "thumbnail": "assets/images/impressionism/irises-thumb.jpg",
+          "width": 1200,
+          "height": 952,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436528",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-436529",
+          "title": "L'Arlésienne: Madame Joseph-Michel Ginoux (Marie Julien, 1848–1911)",
+          "artist": "Vincent van Gogh",
+          "date": "1888–89",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/l-arlesienne-madame-joseph-michel-ginoux-marie-julien-1848-1-large.jpg",
+          "thumbnail": "assets/images/impressionism/l-arlesienne-madame-joseph-michel-ginoux-marie-julien-1848-1-thumb.jpg",
+          "width": 953,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436529",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-437984",
+          "title": "La Berceuse (Woman Rocking a Cradle; Augustine-Alix Pellicot Roulin, 1851–1930)",
+          "artist": "Vincent van Gogh",
+          "date": "1889",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/la-berceuse-woman-rocking-a-cradle-augustine-alix-pellicot-r-large.jpg",
+          "thumbnail": "assets/images/impressionism/la-berceuse-woman-rocking-a-cradle-augustine-alix-pellicot-r-thumb.jpg",
+          "width": 953,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437984",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-436530",
+          "title": "Oleanders",
+          "artist": "Vincent van Gogh",
+          "date": "1888",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/oleanders-large.jpg",
+          "thumbnail": "assets/images/impressionism/oleanders-thumb.jpg",
+          "width": 1200,
+          "height": 986,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436530",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-436533",
+          "title": "Shoes",
+          "artist": "Vincent van Gogh",
+          "date": "1888",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/shoes-large.jpg",
+          "thumbnail": "assets/images/impressionism/shoes-thumb.jpg",
+          "width": 1200,
+          "height": 1003,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436533",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
           "id": "met-435882",
           "title": "Still Life with Apples and a Pot of Primroses",
           "artist": "Paul Cézanne",
@@ -1090,158 +642,58 @@
           }
         },
         {
-          "id": "met-729644",
-          "title": "In proof of true love, a watercarrier skeleton arguing with a woman (Posada); two skeleton angels in upper corners (Manilla)",
-          "artist": "José Guadalupe Posada",
-          "date": "ca. 1890–96",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/in-proof-of-true-love-a-watercarrier-skeleton-arguing-with-a-large.jpg",
-          "thumbnail": "assets/images/impressionism/in-proof-of-true-love-a-watercarrier-skeleton-arguing-with-a-thumb.jpg",
-          "width": 913,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/729644",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-472562",
-          "title": "The Fieschi Morgan Staurotheke",
-          "artist": "Unknown",
-          "date": "early 9th century",
-          "culture": "Byzantine",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/the-fieschi-morgan-staurotheke-large.jpg",
-          "thumbnail": "assets/images/impressionism/the-fieschi-morgan-staurotheke-thumb.jpg",
-          "width": 1200,
-          "height": 960,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/472562",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-436947",
-          "title": "Boating",
+          "id": "met-436965",
+          "title": "The Monet Family in Their Garden at Argenteuil",
           "artist": "Edouard Manet",
           "date": "1874",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/boating-large.jpg",
-          "thumbnail": "assets/images/impressionism/boating-thumb.jpg",
+          "image": "assets/images/impressionism/the-monet-family-in-their-garden-at-argenteuil-large.jpg",
+          "thumbnail": "assets/images/impressionism/the-monet-family-in-their-garden-at-argenteuil-thumb.jpg",
           "width": 1200,
-          "height": 916,
+          "height": 755,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436947",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436965",
           "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
           }
         },
         {
-          "id": "met-206965",
-          "title": "Longcase astronomical regulator",
-          "artist": "Ferdinand Berthoud",
-          "date": "ca. 1768–70",
+          "id": "met-436535",
+          "title": "Wheat Field with Cypresses",
+          "artist": "Vincent van Gogh",
+          "date": "1889",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/longcase-astronomical-regulator-large.jpg",
-          "thumbnail": "assets/images/impressionism/longcase-astronomical-regulator-thumb.jpg",
-          "width": 900,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/206965",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-317877",
-          "title": "Processional Cross",
-          "artist": "Northern Highlands artist",
-          "date": "14th–15th century",
-          "culture": "Northern Highlands region",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/processional-cross-large.jpg",
-          "thumbnail": "assets/images/impressionism/processional-cross-thumb.jpg",
-          "width": 916,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/317877",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-459028",
-          "title": "Portrait of Alvise Contarini(?); (verso) A Tethered Roebuck",
-          "artist": "Jacometto (Jacometto Veneziano)",
-          "date": "ca. 1485–95",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/portrait-of-alvise-contarini-verso-a-tethered-roebuck-large.jpg",
-          "thumbnail": "assets/images/impressionism/portrait-of-alvise-contarini-verso-a-tethered-roebuck-thumb.jpg",
-          "width": 845,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/459028",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-459027",
-          "title": "Portrait of a Woman, Possibly a Nun of San Secondo; (verso) Scene in Grisaille",
-          "artist": "Jacometto (Jacometto Veneziano)",
-          "date": "ca. 1485–95",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/portrait-of-a-woman-possibly-a-nun-of-san-secondo-verso-scen-large.jpg",
-          "thumbnail": "assets/images/impressionism/portrait-of-a-woman-possibly-a-nun-of-san-secondo-verso-scen-thumb.jpg",
-          "width": 837,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/459027",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-839041",
-          "title": "Study of Water and Plants",
-          "artist": "Thomas Fearnley",
-          "date": "1837",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/impressionism/study-of-water-and-plants-large.jpg",
-          "thumbnail": "assets/images/impressionism/study-of-water-and-plants-thumb.jpg",
+          "image": "assets/images/impressionism/wheat-field-with-cypresses-large.jpg",
+          "thumbnail": "assets/images/impressionism/wheat-field-with-cypresses-thumb.jpg",
           "width": 1200,
-          "height": 907,
+          "height": 955,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/839041",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436535",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-436536",
+          "title": "Women Picking Olives",
+          "artist": "Vincent van Gogh",
+          "date": "1889",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/impressionism/women-picking-olives-large.jpg",
+          "thumbnail": "assets/images/impressionism/women-picking-olives-thumb.jpg",
+          "width": 1200,
+          "height": 970,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436536",
           "difficulty": {
             "easy": 24,
             "medium": 54,
@@ -1255,21 +707,41 @@
       "id": "islamic-art",
       "name": "Islamic Art",
       "description": "Islamic geometric and decorative art",
-      "puzzle_count": 9,
+      "puzzle_count": 11,
       "puzzles": [
         {
-          "id": "met-450748",
-          "title": "Ewer with a Feline-Shaped Handle",
-          "artist": "Unknown",
-          "date": "7th century",
+          "id": "met-453336",
+          "title": "A Stallion",
+          "artist": "Habiballah of Sava",
+          "date": "ca. 1601–6",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/islamic-art/ewer-with-a-feline-shaped-handle-large.jpg",
-          "thumbnail": "assets/images/islamic-art/ewer-with-a-feline-shaped-handle-thumb.jpg",
-          "width": 899,
-          "height": 1200,
+          "image": "assets/images/islamic-art/a-stallion-large.jpg",
+          "thumbnail": "assets/images/islamic-art/a-stallion-thumb.jpg",
+          "width": 1200,
+          "height": 809,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/450748",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453336",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
+          }
+        },
+        {
+          "id": "met-454608",
+          "title": "Book of Prayers, Surat al-Yasin and Surat al-Fath",
+          "artist": "Ahmad Nairizi",
+          "date": "dated 1132 AH/1719–20 CE",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/islamic-art/book-of-prayers-surat-al-yasin-and-surat-al-fath-large.jpg",
+          "thumbnail": "assets/images/islamic-art/book-of-prayers-surat-al-yasin-and-surat-al-fath-thumb.jpg",
+          "width": 1200,
+          "height": 950,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/454608",
           "difficulty": {
             "easy": 24,
             "medium": 54,
@@ -1298,6 +770,66 @@
           }
         },
         {
+          "id": "met-456342",
+          "title": "Futuh al-Haramayn (Description of the Holy Cities)",
+          "artist": "Muhi al-Din Lari",
+          "date": "dated 1089 AH/1678 CE",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/islamic-art/futuh-al-haramayn-description-of-the-holy-cities-large.jpg",
+          "thumbnail": "assets/images/islamic-art/futuh-al-haramayn-description-of-the-holy-cities-thumb.jpg",
+          "width": 758,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/456342",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
+          }
+        },
+        {
+          "id": "met-449671",
+          "title": "Inscribed Seal",
+          "artist": "Unknown",
+          "date": "10th–11th century",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/islamic-art/inscribed-seal-large.jpg",
+          "thumbnail": "assets/images/islamic-art/inscribed-seal-thumb.jpg",
+          "width": 838,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449671",
+          "difficulty": {
+            "easy": 24,
+            "medium": 54,
+            "hard": 96,
+            "expert": 192
+          }
+        },
+        {
+          "id": "met-453673",
+          "title": "Nan va Halva (Breads and Sweets)",
+          "artist": "Muhammad Baha' al-Din al-'Amili",
+          "date": "ca. 1690",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/islamic-art/nan-va-halva-breads-and-sweets-large.jpg",
+          "thumbnail": "assets/images/islamic-art/nan-va-halva-breads-and-sweets-thumb.jpg",
+          "width": 829,
+          "height": 1200,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453673",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
+          }
+        },
+        {
           "id": "met-444812",
           "title": "Pair of Minbar Doors",
           "artist": "Unknown",
@@ -1318,23 +850,43 @@
           }
         },
         {
-          "id": "met-449929",
-          "title": "Pendant with Lion and Scorpion",
+          "id": "met-449211",
+          "title": "Panel",
           "artist": "Unknown",
-          "date": "10th century",
+          "date": "second half 8th century",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/islamic-art/pendant-with-lion-and-scorpion-large.jpg",
-          "thumbnail": "assets/images/islamic-art/pendant-with-lion-and-scorpion-thumb.jpg",
-          "width": 1181,
-          "height": 1200,
+          "image": "assets/images/islamic-art/panel-large.jpg",
+          "thumbnail": "assets/images/islamic-art/panel-thumb.jpg",
+          "width": 1200,
+          "height": 362,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449929",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449211",
           "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
+            "easy": 16,
+            "medium": 36,
+            "hard": 64,
+            "expert": 128
+          }
+        },
+        {
+          "id": "met-449312",
+          "title": "Seal Stone",
+          "artist": "Unknown",
+          "date": "10th–11th century",
+          "culture": "",
+          "museum": "Metropolitan Museum of Art",
+          "image": "assets/images/islamic-art/seal-stone-large.jpg",
+          "thumbnail": "assets/images/islamic-art/seal-stone-thumb.jpg",
+          "width": 947,
+          "height": 751,
+          "license": "Public Domain (Met Open Access)",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/449312",
+          "difficulty": {
+            "easy": 20,
+            "medium": 48,
+            "hard": 80,
+            "expert": 160
           }
         },
         {
@@ -1358,78 +910,18 @@
           }
         },
         {
-          "id": "met-453336",
-          "title": "A Stallion",
-          "artist": "Habiballah of Sava",
-          "date": "ca. 1601–6",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/islamic-art/a-stallion-large.jpg",
-          "thumbnail": "assets/images/islamic-art/a-stallion-thumb.jpg",
-          "width": 1200,
-          "height": 809,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453336",
-          "difficulty": {
-            "easy": 20,
-            "medium": 48,
-            "hard": 80,
-            "expert": 160
-          }
-        },
-        {
-          "id": "met-451802",
-          "title": "Bowl with Arabic Inscription",
+          "id": "met-451403",
+          "title": "Wine Drinking in a Spring Garden",
           "artist": "Unknown",
-          "date": "10th century",
+          "date": "ca. 1430",
           "culture": "",
           "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/islamic-art/bowl-with-arabic-inscription-large.jpg",
-          "thumbnail": "assets/images/islamic-art/bowl-with-arabic-inscription-thumb.jpg",
+          "image": "assets/images/islamic-art/wine-drinking-in-a-spring-garden-large.jpg",
+          "thumbnail": "assets/images/islamic-art/wine-drinking-in-a-spring-garden-thumb.jpg",
           "width": 1200,
-          "height": 1200,
+          "height": 866,
           "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/451802",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-453312",
-          "title": "Jewelry Elements",
-          "artist": "Unknown",
-          "date": "late 14th–16th century",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/islamic-art/jewelry-elements-large.jpg",
-          "thumbnail": "assets/images/islamic-art/jewelry-elements-thumb.jpg",
-          "width": 898,
-          "height": 1200,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/453312",
-          "difficulty": {
-            "easy": 24,
-            "medium": 54,
-            "hard": 96,
-            "expert": 192
-          }
-        },
-        {
-          "id": "met-454608",
-          "title": "Book of Prayers, Surat al-Yasin and Surat al-Fath",
-          "artist": "Ahmad Nairizi",
-          "date": "dated 1132 AH/1719–20 CE",
-          "culture": "",
-          "museum": "Metropolitan Museum of Art",
-          "image": "assets/images/islamic-art/book-of-prayers-surat-al-yasin-and-surat-al-fath-large.jpg",
-          "thumbnail": "assets/images/islamic-art/book-of-prayers-surat-al-yasin-and-surat-al-fath-thumb.jpg",
-          "width": 1200,
-          "height": 950,
-          "license": "Public Domain (Met Open Access)",
-          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/454608",
+          "sourceUrl": "https://collectionapi.metmuseum.org/public/collection/v1/objects/451403",
           "difficulty": {
             "easy": 24,
             "medium": 54,

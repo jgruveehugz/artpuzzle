@@ -25,6 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 IMAGES_DIR = os.path.join(BASE_DIR, "src", "assets", "images")
 CANDIDATES_PATH = os.path.join(DATA_DIR, "candidates.json")
+CURATED_PATH = os.path.join(DATA_DIR, "curated.json")
 DOWNLOADED_PATH = os.path.join(DATA_DIR, "downloaded.json")
 
 REQUEST_DELAY = 0.3
@@ -85,11 +86,18 @@ def download_image(url: str, dest_path: str) -> bool:
 # Main
 # ----------------------------------------------------------------------------
 def main() -> None:
-    if not os.path.exists(CANDIDATES_PATH):
-        log.error("candidates.json not found — run fetch.py first")
+    # Prefer curated.json (post-filter) over raw candidates.json.
+    if os.path.exists(CURATED_PATH):
+        src = CURATED_PATH
+        log.info("Using curated.json (filtered set)")
+    elif os.path.exists(CANDIDATES_PATH):
+        src = CANDIDATES_PATH
+        log.info("curated.json not found — falling back to raw candidates.json")
+    else:
+        log.error("No input found — run fetch.py then curate.py first")
         return
 
-    with open(CANDIDATES_PATH, "r", encoding="utf-8") as f:
+    with open(src, "r", encoding="utf-8") as f:
         candidates_data = json.load(f)
     candidates: List[Dict[str, Any]] = candidates_data.get("candidates", [])
     log.info("Loaded %d candidates", len(candidates))
