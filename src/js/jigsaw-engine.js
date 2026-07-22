@@ -513,9 +513,14 @@ class JigsawPuzzle extends Emitter {
     const sw = Math.min(this.imageW - sx, srcW);
     const sh = Math.min(this.imageH - sy, srcH);
 
-    // Destination position within the piece local coords
-    const dx = sx - srcX;
-    const dy = sy - srcY;
+    // Destination position within the piece local coords.
+    // The path body runs (0,0)→(cellW,cellH) with tabs extending to -tabSize.
+    // The image's grid cell must ALSO land at (0,0) so the artwork aligns with
+    // the piece shape. The crop starts tabSize before the cell (srcX), so to put
+    // the cell at local (0,0) we draw the crop at destination -tabSize
+    // (adjusted for any edge clamping via sx-srcX).
+    const dx = (sx - srcX) - tabSize;
+    const dy = (sy - srcY) - tabSize;
 
     ctx.drawImage(this.image, sx, sy, sw, sh, dx, dy, sw, sh);
 
