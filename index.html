@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArtPuzzle — Jigsaw Puzzles from Art History</title>
+  <meta name="description" content="Solve beautiful jigsaw puzzles crafted from public domain masterpieces. Japanese ukiyo-e, Chinese landscapes, Western masters, and more.">
+  <meta property="og:title" content="ArtPuzzle — Jigsaw Puzzles from Art History">
+  <meta property="og:description" content="Solve beautiful jigsaw puzzles crafted from public domain masterpieces.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.metmuseum.org/CRDImages/as/original/DP369217.jpg">
+  <link rel="preconnect" href="https://images.metmuseum.org">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        Art<span class="logo-accent">Puzzle</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero: Daily Featured Puzzle -->
+  <section class="hero" id="hero" aria-label="Today's featured puzzle">
+    <div class="hero-bg">
+      <img id="hero-bg-img" src="https://images.metmuseum.org/CRDImages/as/original/DP369217.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="hero-content" id="hero-content">
+        <p class="hero-eyebrow">Today's Puzzle</p>
+        <h1 class="hero-title" id="hero-title">Loading…</h1>
+        <p class="hero-artist" id="hero-artist"></p>
+        <div class="hero-meta" id="hero-meta"></div>
+        <div class="hero-actions" id="hero-actions">
+          <span class="loading-spinner" aria-label="Loading"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Grid -->
+  <section class="section" aria-label="Browse by category">
+    <div class="container">
+      <h2 class="section-title">Browse by Category</h2>
+      <div class="category-grid" id="category-grid">
+        <div class="loading-spinner" aria-label="Loading categories"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>ArtPuzzle</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Jigsaw puzzles from public domain art collections.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li><a href="https://www.metmuseum.org/about-the-met/policies-and-documents/image-resources" target="_blank" rel="noopener">Public Domain Art</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Artwork images courtesy of The Metropolitan Museum of Art (Open Access). All artworks are in the public domain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

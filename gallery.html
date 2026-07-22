@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — ArtPuzzle</title>
+  <meta name="description" content="Browse all ArtPuzzle jigsaw puzzles. Filter by category, difficulty, or search by artist and title.">
+  <meta property="og:title" content="Gallery — ArtPuzzle">
+  <meta property="og:description" content="Browse all ArtPuzzle jigsaw puzzles.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://images.metmuseum.org">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        Art<span class="logo-accent">Puzzle</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div class="container">
+      <h2 class="section-title">Puzzle Gallery</h2>
+
+      <!-- Toolbar -->
+      <div class="gallery-toolbar" role="search">
+        <div class="search-box">
+          <label for="search-input" class="sr-only">Search puzzles</label>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search by title, artist, or category…"
+            aria-label="Search puzzles by title, artist, or category"
+          >
+        </div>
+        <select class="filter-select" id="category-filter" aria-label="Filter by category">
+          <option value="">All Categories</option>
+        </select>
+        <select class="filter-select" id="difficulty-filter" aria-label="Filter by difficulty">
+          <option value="">All Difficulties</option>
+          <option value="easy">Easy (24 pieces)</option>
+          <option value="medium">Medium (48 pieces)</option>
+          <option value="hard">Hard (96 pieces)</option>
+          <option value="expert">Expert (192 pieces)</option>
+        </select>
+        <span class="gallery-count" id="gallery-count" aria-live="polite"></span>
+      </div>
+
+      <!-- Puzzle Grid -->
+      <div class="puzzle-grid" id="puzzle-grid" aria-live="polite">
+        <div class="loading-spinner" aria-label="Loading puzzles"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>ArtPuzzle</h4>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">Jigsaw puzzles from public domain art collections.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li><a href="https://www.metmuseum.org/about-the-met/policies-and-documents/image-resources" target="_blank" rel="noopener">Public Domain Art</a></li>
+            <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Artwork images courtesy of The Metropolitan Museum of Art (Open Access). All artworks are in the public domain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+</body>
+</html>
